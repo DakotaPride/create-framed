@@ -4,7 +4,9 @@
   "package": "net.dakotapride.createframed.mixin",
   "compatibilityLevel": "JAVA_16",
   "refmap": "createframed.refmap.json",
-  "mixins": [],
+  "mixins": [
+    "CreateCreativeModeTabMixin"
+  ],
   "client": [],
   "injectors": {
     "defaultRequire": 1

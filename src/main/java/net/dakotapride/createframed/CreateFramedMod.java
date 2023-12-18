@@ -5,6 +5,7 @@ import com.simibubi.create.AllBlocks;
 import com.simibubi.create.AllCreativeModeTabs;
 import com.simibubi.create.content.decoration.palettes.AllPaletteBlocks;
 import com.simibubi.create.foundation.data.CreateRegistrate;
+import net.dakotapride.createframed.event.FillCreateItemGroupEvent;
 import net.dakotapride.createframed.registry.CreateFramedBlocks;
 import net.dakotapride.createframed.registry.CreateFramedEntityTypes;
 import net.minecraft.resources.ResourceLocation;
@@ -18,7 +19,6 @@ import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
-import plus.dragons.createdragonlib.init.FillCreateItemGroupEvent;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod("createframed")
