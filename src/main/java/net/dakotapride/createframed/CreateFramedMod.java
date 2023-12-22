@@ -1,13 +1,10 @@
 package net.dakotapride.createframed;
 
 import com.mojang.logging.LogUtils;
-import com.simibubi.create.AllBlocks;
-import com.simibubi.create.AllCreativeModeTabs;
-import com.simibubi.create.content.decoration.palettes.AllPaletteBlocks;
 import com.simibubi.create.foundation.data.CreateRegistrate;
-import net.dakotapride.createframed.event.FillCreateItemGroupEvent;
 import net.dakotapride.createframed.registry.CreateFramedBlocks;
 import net.dakotapride.createframed.registry.CreateFramedEntityTypes;
+import net.dakotapride.createframed.registry.CreateFramedTabs;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -34,12 +31,11 @@ public class CreateFramedMod {
 
     public CreateFramedMod() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-        IEventBus forgeBus = MinecraftForge.EVENT_BUS;
         REGISTRATE.registerEventListeners(bus);
 
         CreateFramedBlocks.register();
         CreateFramedEntityTypes.register();
-        forgeBus.addListener(this::fillCreativeItemGroup);
+        CreateFramedTabs.register();
 
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
@@ -50,113 +46,6 @@ public class CreateFramedMod {
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
-    }
-
-    private void fillCreativeItemGroup(FillCreateItemGroupEvent event) {
-        if(event.getItemGroup() == AllCreativeModeTabs.PALETTES_CREATIVE_TAB) {
-            event.addInsertion(AllBlocks.FRAMED_GLASS_DOOR.get(), CreateFramedBlocks.RED_STAINED_FRAMED_GLASS_DOOR.asStack());
-            event.addInsertion(AllBlocks.FRAMED_GLASS_TRAPDOOR.get(), CreateFramedBlocks.RED_STAINED_FRAMED_GLASS_TRAPDOOR.asStack());
-            event.addInsertion(AllBlocks.FRAMED_GLASS_DOOR.get(), CreateFramedBlocks.ORANGE_STAINED_FRAMED_GLASS_DOOR.asStack());
-            event.addInsertion(AllBlocks.FRAMED_GLASS_TRAPDOOR.get(), CreateFramedBlocks.ORANGE_STAINED_FRAMED_GLASS_TRAPDOOR.asStack());
-            event.addInsertion(AllBlocks.FRAMED_GLASS_DOOR.get(), CreateFramedBlocks.YELLOW_STAINED_FRAMED_GLASS_DOOR.asStack());
-            event.addInsertion(AllBlocks.FRAMED_GLASS_TRAPDOOR.get(), CreateFramedBlocks.YELLOW_STAINED_FRAMED_GLASS_TRAPDOOR.asStack());
-            event.addInsertion(AllBlocks.FRAMED_GLASS_DOOR.get(), CreateFramedBlocks.GREEN_STAINED_FRAMED_GLASS_DOOR.asStack());
-            event.addInsertion(AllBlocks.FRAMED_GLASS_TRAPDOOR.get(), CreateFramedBlocks.GREEN_STAINED_FRAMED_GLASS_TRAPDOOR.asStack());
-            event.addInsertion(AllBlocks.FRAMED_GLASS_DOOR.get(), CreateFramedBlocks.BLUE_STAINED_FRAMED_GLASS_DOOR.asStack());
-            event.addInsertion(AllBlocks.FRAMED_GLASS_TRAPDOOR.get(), CreateFramedBlocks.BLUE_STAINED_FRAMED_GLASS_TRAPDOOR.asStack());
-            event.addInsertion(AllBlocks.FRAMED_GLASS_DOOR.get(), CreateFramedBlocks.LIGHT_BLUE_STAINED_FRAMED_GLASS_DOOR.asStack());
-            event.addInsertion(AllBlocks.FRAMED_GLASS_TRAPDOOR.get(), CreateFramedBlocks.LIGHT_BLUE_STAINED_FRAMED_GLASS_TRAPDOOR.asStack());
-            event.addInsertion(AllBlocks.FRAMED_GLASS_DOOR.get(), CreateFramedBlocks.CYAN_STAINED_FRAMED_GLASS_DOOR.asStack());
-            event.addInsertion(AllBlocks.FRAMED_GLASS_TRAPDOOR.get(), CreateFramedBlocks.CYAN_STAINED_FRAMED_GLASS_TRAPDOOR.asStack());
-            event.addInsertion(AllBlocks.FRAMED_GLASS_DOOR.get(), CreateFramedBlocks.PURPLE_STAINED_FRAMED_GLASS_DOOR.asStack());
-            event.addInsertion(AllBlocks.FRAMED_GLASS_TRAPDOOR.get(), CreateFramedBlocks.PURPLE_STAINED_FRAMED_GLASS_TRAPDOOR.asStack());
-            event.addInsertion(AllBlocks.FRAMED_GLASS_DOOR.get(), CreateFramedBlocks.MAGENTA_STAINED_FRAMED_GLASS_DOOR.asStack());
-            event.addInsertion(AllBlocks.FRAMED_GLASS_TRAPDOOR.get(), CreateFramedBlocks.MAGENTA_STAINED_FRAMED_GLASS_TRAPDOOR.asStack());
-            event.addInsertion(AllBlocks.FRAMED_GLASS_DOOR.get(), CreateFramedBlocks.PINK_STAINED_FRAMED_GLASS_DOOR.asStack());
-            event.addInsertion(AllBlocks.FRAMED_GLASS_TRAPDOOR.get(), CreateFramedBlocks.PINK_STAINED_FRAMED_GLASS_TRAPDOOR.asStack());
-            event.addInsertion(AllBlocks.FRAMED_GLASS_DOOR.get(), CreateFramedBlocks.BLACK_STAINED_FRAMED_GLASS_DOOR.asStack());
-            event.addInsertion(AllBlocks.FRAMED_GLASS_TRAPDOOR.get(), CreateFramedBlocks.BLACK_STAINED_FRAMED_GLASS_TRAPDOOR.asStack());
-            event.addInsertion(AllBlocks.FRAMED_GLASS_DOOR.get(), CreateFramedBlocks.GRAY_STAINED_FRAMED_GLASS_DOOR.asStack());
-            event.addInsertion(AllBlocks.FRAMED_GLASS_TRAPDOOR.get(), CreateFramedBlocks.GRAY_STAINED_FRAMED_GLASS_TRAPDOOR.asStack());
-            event.addInsertion(AllBlocks.FRAMED_GLASS_DOOR.get(), CreateFramedBlocks.LIGHT_GRAY_STAINED_FRAMED_GLASS_DOOR.asStack());
-            event.addInsertion(AllBlocks.FRAMED_GLASS_TRAPDOOR.get(), CreateFramedBlocks.LIGHT_GRAY_STAINED_FRAMED_GLASS_TRAPDOOR.asStack());
-            event.addInsertion(AllBlocks.FRAMED_GLASS_DOOR.get(), CreateFramedBlocks.WHITE_STAINED_FRAMED_GLASS_DOOR.asStack());
-            event.addInsertion(AllBlocks.FRAMED_GLASS_TRAPDOOR.get(), CreateFramedBlocks.WHITE_STAINED_FRAMED_GLASS_TRAPDOOR.asStack());
-            event.addInsertion(AllBlocks.FRAMED_GLASS_DOOR.get(), CreateFramedBlocks.BROWN_STAINED_FRAMED_GLASS_DOOR.asStack());
-            event.addInsertion(AllBlocks.FRAMED_GLASS_TRAPDOOR.get(), CreateFramedBlocks.BROWN_STAINED_FRAMED_GLASS_TRAPDOOR.asStack());
-            event.addInsertion(AllBlocks.FRAMED_GLASS_DOOR.get(), CreateFramedBlocks.TINTED_FRAMED_GLASS_DOOR.asStack());
-            event.addInsertion(AllBlocks.FRAMED_GLASS_TRAPDOOR.get(), CreateFramedBlocks.TINTED_FRAMED_GLASS_TRAPDOOR.asStack());
-
-            event.addInsertion(AllPaletteBlocks.TILED_GLASS.get(), CreateFramedBlocks.RED_STAINED_TILED_GLASS.asStack());
-            event.addInsertion(AllPaletteBlocks.TILED_GLASS_PANE.get(), CreateFramedBlocks.RED_STAINED_TILED_GLASS_PANE.asStack());
-            event.addInsertion(AllPaletteBlocks.TILED_GLASS.get(), CreateFramedBlocks.ORANGE_STAINED_TILED_GLASS.asStack());
-            event.addInsertion(AllPaletteBlocks.TILED_GLASS_PANE.get(), CreateFramedBlocks.ORANGE_STAINED_TILED_GLASS_PANE.asStack());
-            event.addInsertion(AllPaletteBlocks.TILED_GLASS.get(), CreateFramedBlocks.YELLOW_STAINED_TILED_GLASS.asStack());
-            event.addInsertion(AllPaletteBlocks.TILED_GLASS_PANE.get(), CreateFramedBlocks.YELLOW_STAINED_TILED_GLASS_PANE.asStack());
-            event.addInsertion(AllPaletteBlocks.TILED_GLASS.get(), CreateFramedBlocks.GREEN_STAINED_TILED_GLASS.asStack());
-            event.addInsertion(AllPaletteBlocks.TILED_GLASS_PANE.get(), CreateFramedBlocks.GREEN_STAINED_TILED_GLASS_PANE.asStack());
-            event.addInsertion(AllPaletteBlocks.TILED_GLASS.get(), CreateFramedBlocks.LIME_STAINED_TILED_GLASS.asStack());
-            event.addInsertion(AllPaletteBlocks.TILED_GLASS_PANE.get(), CreateFramedBlocks.LIME_STAINED_TILED_GLASS_PANE.asStack());
-            event.addInsertion(AllPaletteBlocks.TILED_GLASS.get(), CreateFramedBlocks.BLUE_STAINED_TILED_GLASS.asStack());
-            event.addInsertion(AllPaletteBlocks.TILED_GLASS_PANE.get(), CreateFramedBlocks.BLUE_STAINED_TILED_GLASS_PANE.asStack());
-            event.addInsertion(AllPaletteBlocks.TILED_GLASS.get(), CreateFramedBlocks.LIGHT_BLUE_STAINED_TILED_GLASS.asStack());
-            event.addInsertion(AllPaletteBlocks.TILED_GLASS_PANE.get(), CreateFramedBlocks.LIGHT_BLUE_STAINED_TILED_GLASS_PANE.asStack());
-            event.addInsertion(AllPaletteBlocks.TILED_GLASS.get(), CreateFramedBlocks.CYAN_STAINED_TILED_GLASS.asStack());
-            event.addInsertion(AllPaletteBlocks.TILED_GLASS_PANE.get(), CreateFramedBlocks.CYAN_STAINED_TILED_GLASS_PANE.asStack());
-            event.addInsertion(AllPaletteBlocks.TILED_GLASS.get(), CreateFramedBlocks.PURPLE_STAINED_TILED_GLASS.asStack());
-            event.addInsertion(AllPaletteBlocks.TILED_GLASS_PANE.get(), CreateFramedBlocks.PURPLE_STAINED_TILED_GLASS_PANE.asStack());
-            event.addInsertion(AllPaletteBlocks.TILED_GLASS.get(), CreateFramedBlocks.MAGENTA_STAINED_TILED_GLASS.asStack());
-            event.addInsertion(AllPaletteBlocks.TILED_GLASS_PANE.get(), CreateFramedBlocks.MAGENTA_STAINED_TILED_GLASS_PANE.asStack());
-            event.addInsertion(AllPaletteBlocks.TILED_GLASS.get(), CreateFramedBlocks.PINK_STAINED_TILED_GLASS.asStack());
-            event.addInsertion(AllPaletteBlocks.TILED_GLASS_PANE.get(), CreateFramedBlocks.PINK_STAINED_TILED_GLASS_PANE.asStack());
-            event.addInsertion(AllPaletteBlocks.TILED_GLASS.get(), CreateFramedBlocks.BLACK_STAINED_TILED_GLASS.asStack());
-            event.addInsertion(AllPaletteBlocks.TILED_GLASS_PANE.get(), CreateFramedBlocks.BLACK_STAINED_TILED_GLASS_PANE.asStack());
-            event.addInsertion(AllPaletteBlocks.TILED_GLASS.get(), CreateFramedBlocks.GRAY_STAINED_TILED_GLASS.asStack());
-            event.addInsertion(AllPaletteBlocks.TILED_GLASS_PANE.get(), CreateFramedBlocks.GRAY_STAINED_TILED_GLASS_PANE.asStack());
-            event.addInsertion(AllPaletteBlocks.TILED_GLASS.get(), CreateFramedBlocks.LIGHT_GRAY_STAINED_TILED_GLASS.asStack());
-            event.addInsertion(AllPaletteBlocks.TILED_GLASS_PANE.get(), CreateFramedBlocks.LIGHT_GRAY_STAINED_TILED_GLASS_PANE.asStack());
-            event.addInsertion(AllPaletteBlocks.TILED_GLASS.get(), CreateFramedBlocks.WHITE_STAINED_TILED_GLASS.asStack());
-            event.addInsertion(AllPaletteBlocks.TILED_GLASS_PANE.get(), CreateFramedBlocks.WHITE_STAINED_TILED_GLASS_PANE.asStack());
-            event.addInsertion(AllPaletteBlocks.TILED_GLASS.get(), CreateFramedBlocks.BROWN_STAINED_TILED_GLASS.asStack());
-            event.addInsertion(AllPaletteBlocks.TILED_GLASS_PANE.get(), CreateFramedBlocks.BROWN_STAINED_TILED_GLASS_PANE.asStack());
-            event.addInsertion(AllPaletteBlocks.TILED_GLASS.get(), CreateFramedBlocks.TINTED_TILED_GLASS.asStack());
-            event.addInsertion(AllPaletteBlocks.TILED_GLASS_PANE.get(), CreateFramedBlocks.TINTED_TILED_GLASS_PANE.asStack());
-
-            event.addInsertion(AllPaletteBlocks.FRAMED_GLASS.get(), CreateFramedBlocks.RED_STAINED_FRAMED_GLASS.asStack());
-            event.addInsertion(AllPaletteBlocks.FRAMED_GLASS_PANE.get(), CreateFramedBlocks.RED_STAINED_FRAMED_GLASS_PANE.asStack());
-            event.addInsertion(AllPaletteBlocks.FRAMED_GLASS.get(), CreateFramedBlocks.ORANGE_STAINED_FRAMED_GLASS.asStack());
-            event.addInsertion(AllPaletteBlocks.FRAMED_GLASS_PANE.get(), CreateFramedBlocks.ORANGE_STAINED_FRAMED_GLASS_PANE.asStack());
-            event.addInsertion(AllPaletteBlocks.FRAMED_GLASS.get(), CreateFramedBlocks.YELLOW_STAINED_FRAMED_GLASS.asStack());
-            event.addInsertion(AllPaletteBlocks.FRAMED_GLASS_PANE.get(), CreateFramedBlocks.YELLOW_STAINED_FRAMED_GLASS_PANE.asStack());
-            event.addInsertion(AllPaletteBlocks.FRAMED_GLASS.get(), CreateFramedBlocks.GREEN_STAINED_FRAMED_GLASS.asStack());
-            event.addInsertion(AllPaletteBlocks.FRAMED_GLASS_PANE.get(), CreateFramedBlocks.GREEN_STAINED_FRAMED_GLASS_PANE.asStack());
-            event.addInsertion(AllPaletteBlocks.FRAMED_GLASS.get(), CreateFramedBlocks.LIME_STAINED_FRAMED_GLASS.asStack());
-            event.addInsertion(AllPaletteBlocks.FRAMED_GLASS_PANE.get(), CreateFramedBlocks.LIME_STAINED_FRAMED_GLASS_PANE.asStack());
-            event.addInsertion(AllPaletteBlocks.FRAMED_GLASS.get(), CreateFramedBlocks.BLUE_STAINED_FRAMED_GLASS.asStack());
-            event.addInsertion(AllPaletteBlocks.FRAMED_GLASS_PANE.get(), CreateFramedBlocks.BLUE_STAINED_FRAMED_GLASS_PANE.asStack());
-            event.addInsertion(AllPaletteBlocks.FRAMED_GLASS.get(), CreateFramedBlocks.LIGHT_BLUE_STAINED_FRAMED_GLASS.asStack());
-            event.addInsertion(AllPaletteBlocks.FRAMED_GLASS_PANE.get(), CreateFramedBlocks.LIGHT_BLUE_STAINED_FRAMED_GLASS_PANE.asStack());
-            event.addInsertion(AllPaletteBlocks.FRAMED_GLASS.get(), CreateFramedBlocks.CYAN_STAINED_FRAMED_GLASS.asStack());
-            event.addInsertion(AllPaletteBlocks.FRAMED_GLASS_PANE.get(), CreateFramedBlocks.CYAN_STAINED_FRAMED_GLASS_PANE.asStack());
-            event.addInsertion(AllPaletteBlocks.FRAMED_GLASS.get(), CreateFramedBlocks.PURPLE_STAINED_FRAMED_GLASS.asStack());
-            event.addInsertion(AllPaletteBlocks.FRAMED_GLASS_PANE.get(), CreateFramedBlocks.PURPLE_STAINED_FRAMED_GLASS_PANE.asStack());
-            event.addInsertion(AllPaletteBlocks.FRAMED_GLASS.get(), CreateFramedBlocks.MAGENTA_STAINED_FRAMED_GLASS.asStack());
-            event.addInsertion(AllPaletteBlocks.FRAMED_GLASS_PANE.get(), CreateFramedBlocks.MAGENTA_STAINED_FRAMED_GLASS_PANE.asStack());
-            event.addInsertion(AllPaletteBlocks.FRAMED_GLASS.get(), CreateFramedBlocks.PINK_STAINED_FRAMED_GLASS.asStack());
-            event.addInsertion(AllPaletteBlocks.FRAMED_GLASS_PANE.get(), CreateFramedBlocks.PINK_STAINED_FRAMED_GLASS_PANE.asStack());
-            event.addInsertion(AllPaletteBlocks.FRAMED_GLASS.get(), CreateFramedBlocks.BLACK_STAINED_FRAMED_GLASS.asStack());
-            event.addInsertion(AllPaletteBlocks.FRAMED_GLASS_PANE.get(), CreateFramedBlocks.BLACK_STAINED_FRAMED_GLASS_PANE.asStack());
-            event.addInsertion(AllPaletteBlocks.FRAMED_GLASS.get(), CreateFramedBlocks.GRAY_STAINED_FRAMED_GLASS.asStack());
-            event.addInsertion(AllPaletteBlocks.FRAMED_GLASS_PANE.get(), CreateFramedBlocks.GRAY_STAINED_FRAMED_GLASS_PANE.asStack());
-            event.addInsertion(AllPaletteBlocks.FRAMED_GLASS.get(), CreateFramedBlocks.LIGHT_GRAY_STAINED_FRAMED_GLASS.asStack());
-            event.addInsertion(AllPaletteBlocks.FRAMED_GLASS_PANE.get(), CreateFramedBlocks.LIGHT_GRAY_STAINED_FRAMED_GLASS_PANE.asStack());
-            event.addInsertion(AllPaletteBlocks.FRAMED_GLASS.get(), CreateFramedBlocks.WHITE_STAINED_FRAMED_GLASS.asStack());
-            event.addInsertion(AllPaletteBlocks.FRAMED_GLASS_PANE.get(), CreateFramedBlocks.WHITE_STAINED_FRAMED_GLASS_PANE.asStack());
-            event.addInsertion(AllPaletteBlocks.FRAMED_GLASS.get(), CreateFramedBlocks.BROWN_STAINED_FRAMED_GLASS.asStack());
-            event.addInsertion(AllPaletteBlocks.FRAMED_GLASS_PANE.get(), CreateFramedBlocks.BROWN_STAINED_FRAMED_GLASS_PANE.asStack());
-            event.addInsertion(AllPaletteBlocks.FRAMED_GLASS.get(), CreateFramedBlocks.TINTED_FRAMED_GLASS.asStack());
-            event.addInsertion(AllPaletteBlocks.FRAMED_GLASS_PANE.get(), CreateFramedBlocks.TINTED_FRAMED_GLASS_PANE.asStack());
-        }
     }
 
     private void setup(final FMLCommonSetupEvent event) {

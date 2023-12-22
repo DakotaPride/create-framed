@@ -57,7 +57,7 @@ import static com.simibubi.create.foundation.data.CreateRegistrate.connectedText
 
 @SuppressWarnings({"unused","removal"})
 public class CreateFramedBuilderTransformers {
-    private static final CreateRegistrate REGISTRATE = CreateFramedMod.REGISTRATE.creativeModeTab(() -> AllCreativeModeTabs.PALETTES_CREATIVE_TAB);
+    private static final CreateRegistrate REGISTRATE = CreateFramedMod.REGISTRATE.creativeModeTab(() -> CreateFramedTabs.CREATE_FRAMED);
 
     public static BlockEntry<ConnectedGlassBlock> colouredFramedGlass(String name,
                                                                       Supplier<ConnectedTextureBehaviour> behaviour,

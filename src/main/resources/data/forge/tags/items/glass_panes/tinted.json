@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "#createframed:createframed/tinted/panes"
+    "#createframed:createframed/tinted/pane"
   ]
 }
