@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "createframed:tinted_stained_framed_glass_pane",
-    "createframed:tinted_stained_tiled_glass_pane"
+    "createframed:tinted_framed_glass_pane",
+    "createframed:tinted_tiled_glass_pane"
   ]
 }
