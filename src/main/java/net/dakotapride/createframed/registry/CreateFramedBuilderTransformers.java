@@ -30,7 +30,9 @@ import net.dakotapride.createframed.block.TintedConnectedGlassBlock;
 import net.dakotapride.createframed.block.TintedConnectedGlassPaneBlock;
 import net.dakotapride.createframed.block.TintedFramedGlassTrapdoorBlock;
 import net.dakotapride.createframed.block.TintedGlassPaneBlock;
+import net.dakotapride.createframed.block.behaviour.FramedDoorMovingInteraction;
 import net.dakotapride.createframed.block.behaviour.FramedGlassTrapdoorCTBehaviour;
+import net.dakotapride.createframed.block.behaviour.FramedSlidingDoorMovementBehaviour;
 import net.dakotapride.createframed.block.door.FramedGlassSlidingDoorBlock;
 import net.dakotapride.createframed.block.door.TintedFramedGlassSlidingDoorBlock;
 import net.minecraft.client.renderer.RenderType;
@@ -116,8 +118,8 @@ public class CreateFramedBuilderTransformers {
         return b -> b.initialProperties(Material.WOOD) // for villager AI..
                 .properties(p -> p.strength(3.0F, 6.0F))
                 .addLayer(() -> RenderType::translucent)
-                .onRegister(interactionBehaviour(new DoorMovingInteraction()))
-                .onRegister(movementBehaviour(new SlidingDoorMovementBehaviour()))
+                .onRegister(interactionBehaviour(new FramedDoorMovingInteraction()))
+                .onRegister(movementBehaviour(new FramedSlidingDoorMovementBehaviour()))
                 .item()
                 .build();
     }
@@ -126,8 +128,8 @@ public class CreateFramedBuilderTransformers {
         return b -> b.initialProperties(Material.WOOD) // for villager AI..
                 .properties(p -> p.strength(3.0F, 6.0F))
                 .addLayer(() -> RenderType::translucent)
-                .onRegister(interactionBehaviour(new DoorMovingInteraction()))
-                .onRegister(movementBehaviour(new SlidingDoorMovementBehaviour()))
+                .onRegister(interactionBehaviour(new FramedDoorMovingInteraction()))
+                .onRegister(movementBehaviour(new FramedSlidingDoorMovementBehaviour()))
                 .item()
                 .build();
     }

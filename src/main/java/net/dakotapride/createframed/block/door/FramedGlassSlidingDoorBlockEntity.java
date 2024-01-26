@@ -7,7 +7,7 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class FramedGlassSlidingDoorBlockEntity extends SlidingDoorBlockEntity {
-    LerpedFloat animation;
+    public LerpedFloat animation;
     public FramedGlassSlidingDoorBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
         super(type, pos, state);
         animation = LerpedFloat.linear()
