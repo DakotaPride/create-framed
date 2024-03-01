@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "createframed:block/purple_stained_framed_glass"
+  }
+}

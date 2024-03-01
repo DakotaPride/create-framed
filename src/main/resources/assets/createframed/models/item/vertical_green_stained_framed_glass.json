@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "createframed:block/green_stained_framed_glass",
+    "side": "createframed:block/vertical_green_stained_framed_glass"
+  }
+}

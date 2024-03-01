@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "tag": "forge:glass/purple"
+  },
+  "result": "createframed:horizontal_purple_stained_framed_glass"
+}

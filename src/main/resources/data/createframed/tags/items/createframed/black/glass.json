@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "createframed:black_stained_framed_glass",
+    "createframed:horizontal_black_stained_framed_glass",
+    "createframed:vertical_black_stained_framed_glass",
     "createframed:black_stained_tiled_glass"
   ]
 }

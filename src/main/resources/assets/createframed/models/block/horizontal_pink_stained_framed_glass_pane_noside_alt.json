@@ -1,0 +1,7 @@
+{
+  "parent": "create:block/connected_glass_pane/noside_alt",
+  "textures": {
+    "edge": "createframed:block/pink_stained_framed_glass_pane_top",
+    "pane": "createframed:block/pink_stained_framed_glass"
+  }
+}

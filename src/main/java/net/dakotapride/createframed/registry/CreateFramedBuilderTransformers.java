@@ -190,9 +190,24 @@ public class CreateFramedBuilderTransformers {
         return tintedConnectedGlassPane(name, parent, ctshift, sideTexture, itemSideTexture, topTexture, renderType);
     }
 
-    public static BlockEntry<TintedConnectedGlassBlock> tintedFramedGlass() {
+    public static BlockEntry<TintedConnectedGlassBlock> tintedFramedGlass(CTSpriteShiftEntry entry) {
         return REGISTRATE.block("tinted_framed_glass", TintedConnectedGlassBlock::new)
-                .onRegister(connectedTextures(() -> new SimpleCTBehaviour(CreateFramedSpriteShifts.TINTED_FRAMED_GLASS)))
+                .onRegister(connectedTextures(() -> new SimpleCTBehaviour(entry)))
+                .addLayer(() -> RenderType::translucent)
+                .initialProperties(() -> Blocks.TINTED_GLASS)
+                .properties((p) -> p.isValidSpawn(CreateFramedBuilderTransformers::never)
+                        .isRedstoneConductor(CreateFramedBuilderTransformers::never)
+                        .isSuffocating(CreateFramedBuilderTransformers::never)
+                        .isViewBlocking(CreateFramedBuilderTransformers::never)
+                        .noOcclusion())
+                .item()
+                .build()
+                .register();
+    }
+
+    public static BlockEntry<TintedConnectedGlassBlock> tintedFramedGlass(String name, ConnectedTextureBehaviour.Base behaviour) {
+        return REGISTRATE.block(name + "_" + "tinted_framed_glass", TintedConnectedGlassBlock::new)
+                .onRegister(connectedTextures(() -> behaviour))
                 .addLayer(() -> RenderType::translucent)
                 .initialProperties(() -> Blocks.TINTED_GLASS)
                 .properties((p) -> p.isValidSpawn(CreateFramedBuilderTransformers::never)

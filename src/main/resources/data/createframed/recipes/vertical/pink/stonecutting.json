@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "tag": "forge:glass/pink"
+  },
+  "result": "createframed:vertical_pink_stained_framed_glass"
+}

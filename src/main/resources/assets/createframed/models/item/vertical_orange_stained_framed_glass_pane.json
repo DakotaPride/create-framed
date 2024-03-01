@@ -1,0 +1,7 @@
+{
+  "parent": "create:item/pane",
+  "textures": {
+    "edge": "createframed:block/orange_stained_framed_glass_pane_top",
+    "pane": "createframed:block/vertical_orange_stained_framed_glass"
+  }
+}
