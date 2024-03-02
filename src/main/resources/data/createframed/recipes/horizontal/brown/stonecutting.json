@@ -4,5 +4,5 @@
   "ingredient": {
     "tag": "forge:glass/brown"
   },
-  "result": "createframed:brown_stained_framed_glass"
+  "result": "createframed:horizontal_brown_stained_framed_glass"
 }
