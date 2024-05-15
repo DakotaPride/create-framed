@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "createframed:horizontal_red_stained_framed_glass_pane",
+    "createframed:horizontal_orange_stained_framed_glass_pane",
+    "createframed:horizontal_yellow_stained_framed_glass_pane",
+    "createframed:horizontal_green_stained_framed_glass_pane",
+    "createframed:horizontal_lime_stained_framed_glass_pane",
+    "createframed:horizontal_blue_stained_framed_glass_pane",
+    "createframed:horizontal_light_blue_stained_framed_glass_pane",
+    "createframed:horizontal_cyan_stained_framed_glass_pane",
+    "createframed:horizontal_purple_stained_framed_glass_pane",
+    "createframed:horizontal_magenta_stained_framed_glass_pane",
+    "createframed:horizontal_pink_stained_framed_glass_pane",
+    "createframed:horizontal_black_stained_framed_glass_pane",
+    "createframed:horizontal_gray_stained_framed_glass_pane",
+    "createframed:horizontal_light_gray_stained_framed_glass_pane",
+    "createframed:horizontal_white_stained_framed_glass_pane",
+    "createframed:horizontal_brown_stained_framed_glass_pane"
+  ]
+}

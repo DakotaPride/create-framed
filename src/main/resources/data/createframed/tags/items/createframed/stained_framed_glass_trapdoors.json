@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "createframed:red_stained_framed_glass_trapdoor",
+    "createframed:orange_stained_framed_glass_trapdoor",
+    "createframed:yellow_stained_framed_glass_trapdoor",
+    "createframed:green_stained_framed_glass_trapdoor",
+    "createframed:lime_stained_framed_glass_trapdoor",
+    "createframed:blue_stained_framed_glass_trapdoor",
+    "createframed:light_blue_stained_framed_glass_trapdoor",
+    "createframed:cyan_stained_framed_glass_trapdoor",
+    "createframed:purple_stained_framed_glass_trapdoor",
+    "createframed:magenta_stained_framed_glass_trapdoor",
+    "createframed:pink_stained_framed_glass_trapdoor",
+    "createframed:black_stained_framed_glass_trapdoor",
+    "createframed:gray_stained_framed_glass_trapdoor",
+    "createframed:light_gray_stained_framed_glass_trapdoor",
+    "createframed:white_stained_framed_glass_trapdoor",
+    "createframed:brown_stained_framed_glass_trapdoor"
+  ]
+}
