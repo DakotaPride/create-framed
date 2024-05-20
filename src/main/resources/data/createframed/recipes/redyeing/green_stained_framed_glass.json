@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "stained_framed_glass",
+  "key": {
+    "#": {
+      "item": "create:framed_glass"
+    },
+    "X": {
+      "item": "minecraft:green_dye"
+    }
+  },
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "result": {
+    "count": 8,
+    "item": "createframed:green_stained_framed_glass"
+  },
+  "show_notification": true
+}
