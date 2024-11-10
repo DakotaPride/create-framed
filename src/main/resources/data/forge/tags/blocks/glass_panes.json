@@ -17,7 +17,7 @@
     "#createframed:light_gray/pane",
     "#createframed:white/pane",
     "#createframed:brown/pane",
-    "#createframed:createframed/tinted/pane",
+    "#createframed:tinted/pane",
     "createframed:andesite_alloy_window_pane",
     "createframed:brass_window_pane",
     "createframed:copper_window_pane",
