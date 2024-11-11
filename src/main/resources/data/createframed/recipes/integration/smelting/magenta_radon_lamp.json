@@ -10,7 +10,7 @@
   "cookingtime": 50,
   "experience": 0.0,
   "ingredient": {
-    "tag": "createframed:framed_radon_lamp_magenta"
+    "item": "createframed:framed_radon_lamp_magenta"
   },
   "result": "alexscaves:radon_lamp_magenta"
 }

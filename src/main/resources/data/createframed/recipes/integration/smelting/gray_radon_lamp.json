@@ -10,7 +10,7 @@
   "cookingtime": 50,
   "experience": 0.0,
   "ingredient": {
-    "tag": "createframed:framed_radon_lamp_gray"
+    "item": "createframed:framed_radon_lamp_gray"
   },
   "result": "alexscaves:radon_lamp_gray"
 }
