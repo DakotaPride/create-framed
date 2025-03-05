@@ -4,8 +4,8 @@ import com.simibubi.create.content.decoration.palettes.ConnectedGlassPaneBlock;
 import com.simibubi.create.content.decoration.palettes.WindowBlock;
 import com.simibubi.create.foundation.block.connected.CTSpriteShiftEntry;
 import com.simibubi.create.foundation.block.connected.HorizontalCTBehaviour;
-import com.simibubi.create.foundation.utility.Lang;
 import com.tterrag.registrate.util.entry.BlockEntry;
+import net.createmod.catnip.lang.Lang;
 import net.dakotapride.createframed.CreateFramedMod;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
@@ -17,9 +17,11 @@ public enum CreateFramedWindows {
     COPPER(() -> CreateFramedSpriteShifts.COPPER_WINDOW, Blocks.COPPER_BLOCK, true),
     ZINC(() -> CreateFramedSpriteShifts.ZINC_WINDOW, Blocks.GLOW_LICHEN, true),
     ANDESITE_ALLOY(() -> CreateFramedSpriteShifts.ANDESITE_ALLOY_WINDOW, Blocks.ANDESITE, true),
-    INDUSTRIAL_IRON(() -> CreateFramedSpriteShifts.INDUSTRIAL_IRON_WINDOW, Blocks.NETHERITE_BLOCK, true),
+    // I'm glad I had this, but DAMN create mod did it so much better
+    //INDUSTRIAL_IRON(() -> CreateFramedSpriteShifts.INDUSTRIAL_IRON_WINDOW, Blocks.NETHERITE_BLOCK, true),
     ROSE_QUARTZ(() -> CreateFramedSpriteShifts.ROSE_QUARTZ_WINDOW, Blocks.RED_TERRACOTTA, false),
-    BRASS(() -> CreateFramedSpriteShifts.BRASS_WINDOW, Blocks.YELLOW_TERRACOTTA, true);
+    BRASS(() -> CreateFramedSpriteShifts.BRASS_WINDOW, Blocks.YELLOW_TERRACOTTA, true),
+    CARDBOARD(() -> CreateFramedSpriteShifts.CARDBOARD_WINDOW, Blocks.WHITE_TERRACOTTA, true),;
 
     private final ResourceLocation id;
     public final BlockEntry<WindowBlock> window_block;

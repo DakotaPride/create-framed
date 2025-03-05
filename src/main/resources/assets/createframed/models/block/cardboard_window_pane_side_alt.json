@@ -1,0 +1,7 @@
+{
+  "parent": "create:block/connected_glass_pane/side_alt",
+  "textures": {
+    "edge": "create:block/cardboard_block_top",
+    "pane": "createframed:block/cardboard_window"
+  }
+}

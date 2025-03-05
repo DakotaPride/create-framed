@@ -1,7 +1,6 @@
 {
-  "parent": "create:item/pane",
+  "parent": "minecraft:item/generated",
   "textures": {
-    "edge": "create:block/brass_block",
-    "pane": "createframed:block/brass_window"
+    "layer0": "createframed:block/brass_window"
   }
 }

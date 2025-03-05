@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cube_column",
   "textures": {
-    "end": "createframed:block/copper_window_top",
+    "end": "minecraft:block/copper_block",
     "side": "createframed:block/copper_window"
   }
 }

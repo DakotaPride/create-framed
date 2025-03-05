@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "createframed:cardboard_window",
+    "createframed:cardboard_window_pane"
+  ]
+}

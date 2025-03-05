@@ -36,8 +36,8 @@ import net.minecraft.world.level.material.MapColor;
 
 import java.util.function.Supplier;
 
-import static com.simibubi.create.AllInteractionBehaviours.interactionBehaviour;
-import static com.simibubi.create.AllMovementBehaviours.movementBehaviour;
+import static com.simibubi.create.api.behaviour.interaction.MovingInteractionBehaviour.interactionBehaviour;
+import static com.simibubi.create.api.behaviour.movement.MovementBehaviour.movementBehaviour;
 import static com.simibubi.create.foundation.data.CreateRegistrate.connectedTextures;
 
 @SuppressWarnings({"unused","removal"})

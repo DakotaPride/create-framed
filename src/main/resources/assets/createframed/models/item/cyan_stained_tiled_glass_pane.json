@@ -1,7 +1,6 @@
 {
-  "parent": "create:item/pane",
+  "parent": "minecraft:item/generated",
   "textures": {
-    "edge": "createframed:block/cyan_stained_glass_pane_top",
-    "pane": "createframed:block/cyan_stained_tiled_glass"
+    "layer0": "createframed:block/cyan_stained_tiled_glass"
   }
 }

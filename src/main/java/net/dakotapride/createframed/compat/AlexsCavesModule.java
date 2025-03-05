@@ -1,16 +1,12 @@
 package net.dakotapride.createframed.compat;
 
-import com.simibubi.create.AllCreativeModeTabs;
-import com.simibubi.create.content.decoration.palettes.ConnectedGlassBlock;
 import com.simibubi.create.foundation.block.connected.ConnectedTextureBehaviour;
 import com.simibubi.create.foundation.block.connected.SimpleCTBehaviour;
-import com.simibubi.create.foundation.data.CreateRegistrate;
-import com.simibubi.create.foundation.utility.Lang;
 import com.tterrag.registrate.util.entry.BlockEntry;
+import net.createmod.catnip.lang.Lang;
 import net.dakotapride.createframed.CreateFramedMod;
 import net.dakotapride.createframed.registry.CreateFramedBuilderTransformers;
 import net.dakotapride.createframed.registry.CreateFramedSpriteShifts;
-import net.dakotapride.createframed.registry.CreateFramedTabs;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.material.MapColor;

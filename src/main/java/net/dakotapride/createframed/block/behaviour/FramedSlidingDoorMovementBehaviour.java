@@ -1,7 +1,7 @@
 package net.dakotapride.createframed.block.behaviour;
 
+import com.simibubi.create.api.behaviour.movement.MovementBehaviour;
 import com.simibubi.create.content.contraptions.Contraption;
-import com.simibubi.create.content.contraptions.behaviour.MovementBehaviour;
 import com.simibubi.create.content.contraptions.behaviour.MovementContext;
 import com.simibubi.create.content.contraptions.elevator.ElevatorColumn;
 import com.simibubi.create.content.contraptions.elevator.ElevatorContraption;
@@ -11,7 +11,7 @@ import com.simibubi.create.content.trains.entity.Carriage;
 import com.simibubi.create.content.trains.entity.CarriageContraptionEntity;
 import com.simibubi.create.content.trains.station.GlobalStation;
 import com.simibubi.create.foundation.blockEntity.behaviour.BlockEntityBehaviour;
-import com.simibubi.create.foundation.utility.animation.LerpedFloat;
+import net.createmod.catnip.animation.LerpedFloat;
 import net.dakotapride.createframed.block.door.FramedGlassSlidingDoorBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -33,10 +33,10 @@ import java.util.Map;
 
 public class FramedSlidingDoorMovementBehaviour implements MovementBehaviour {
 
-    @Override
-    public boolean renderAsNormalBlockEntity() {
-        return true;
-    }
+//    @Override
+//    public boolean renderAsNormalBlockEntity() {
+//        return true;
+//    }
 
     @Override
     public boolean mustTickWhileDisabled() {

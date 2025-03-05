@@ -1,7 +1,6 @@
 {
-  "parent": "create:item/pane",
+  "parent": "minecraft:item/generated",
   "textures": {
-    "edge": "createframed:block/andesite_alloy_window_top",
-    "pane": "createframed:block/andesite_alloy_window"
+    "layer0": "createframed:block/andesite_alloy_window"
   }
 }

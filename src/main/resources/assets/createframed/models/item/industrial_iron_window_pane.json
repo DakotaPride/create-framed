@@ -1,7 +1,0 @@
-{
-  "parent": "create:item/pane",
-  "textures": {
-    "edge": "create:block/industrial_iron_block",
-    "pane": "createframed:block/industrial_iron_window"
-  }
-}

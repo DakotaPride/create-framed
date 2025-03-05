@@ -1,7 +1,6 @@
 {
-  "parent": "create:item/pane",
+  "parent": "minecraft:item/generated",
   "textures": {
-    "edge": "createframed:block/zinc_window_top",
-    "pane": "createframed:block/zinc_window"
+    "layer0": "createframed:block/zinc_window"
   }
 }

@@ -13,10 +13,13 @@
   "block.createframed.rose_quartz_window_pane": "Rose Quartz Window Pane",
   "block.createframed.andesite_alloy_window": "Andesite Alloy Window",
   "block.createframed.andesite_alloy_window_pane": "Andesite Alloy Window Pane",
-  "block.createframed.industrial_iron_window": "Industrial Iron Window",
-  "block.createframed.industrial_iron_window_pane": "Industrial Iron Window Pane",
-  "block.createframed.emerald_window": "Emerald Window",
-  "block.createframed.emerald_window_pane": "Emerald Window Pane",
+
+  // End
+
+  // start v1.5.7 translations
+
+  "block.createframed.cardboard_window": "Cardboard Peephole",
+  "block.createframed.cardboard_window_pane": "Cardboard Peephole Pane",
 
   // End
 

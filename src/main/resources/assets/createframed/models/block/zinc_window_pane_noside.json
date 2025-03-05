@@ -1,7 +1,7 @@
 {
   "parent": "create:block/connected_glass_pane/noside",
   "textures": {
-    "edge": "createframed:block/zinc_window_top",
+    "edge": "create:block/zinc_block",
     "pane": "createframed:block/zinc_window"
   }
 }

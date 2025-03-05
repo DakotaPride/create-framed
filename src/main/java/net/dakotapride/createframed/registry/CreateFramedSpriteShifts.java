@@ -67,7 +67,8 @@ public class CreateFramedSpriteShifts {
             BRASS_WINDOW = getCT(AllCTTypes.VERTICAL, "brass_window"),
             ROSE_QUARTZ_WINDOW = getCT(AllCTTypes.VERTICAL, "rose_quartz_window"),
             ANDESITE_ALLOY_WINDOW = getCT(AllCTTypes.VERTICAL, "andesite_alloy_window"),
-            INDUSTRIAL_IRON_WINDOW = getCT(AllCTTypes.VERTICAL, "industrial_iron_window");
+            CARDBOARD_WINDOW = getCT(AllCTTypes.HORIZONTAL_KRYPPERS, "cardboard_window");
+            //INDUSTRIAL_IRON_WINDOW = getCT(AllCTTypes.VERTICAL, "industrial_iron_window");
     public static final CTSpriteShiftEntry
             RED_FRAMED_RADON_LAMP = omni("alexscaves/framed_radon_lamp_red"),
             ORANGE_FRAMED_RADON_LAMP = omni("alexscaves/framed_radon_lamp_orange"),
