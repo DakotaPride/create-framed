@@ -6,7 +6,7 @@
       "item": "create:cardboard"
     },
     "X": {
-      "tag": "c:glass_blocks/colorless"
+      "tag": "forge:glass/colorless"
     }
   },
   "pattern": [
