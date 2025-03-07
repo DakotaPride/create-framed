@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:tinted_glass",
+    "#createframed:tinted/glass"
+  ]
+}

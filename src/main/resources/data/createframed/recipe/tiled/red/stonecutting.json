@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "c:glass_blocks/red"
+  },
+  "result": {
+    "id": "createframed:red_stained_tiled_glass"
+  }
+}

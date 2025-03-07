@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "c:glass_blocks/black"
+  },
+  "result": {
+    "id": "createframed:vertical_black_stained_framed_glass"
+  }
+}

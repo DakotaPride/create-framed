@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "c:glass_blocks/magenta"
+  },
+  "result": {
+    "id": "createframed:horizontal_magenta_stained_framed_glass"
+  }
+}

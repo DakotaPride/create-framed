@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "c:glass_blocks/white"
+  },
+  "result": {
+    "id": "createframed:vertical_white_stained_framed_glass"
+  }
+}

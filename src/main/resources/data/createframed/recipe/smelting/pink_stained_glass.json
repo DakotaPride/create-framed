@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "cookingtime": 50,
+  "experience": 0.0,
+  "ingredient": {
+    "tag": "createframed:pink/glass"
+  },
+  "result": {
+    "id": "minecraft:pink_stained_glass"
+  }
+}

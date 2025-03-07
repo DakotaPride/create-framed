@@ -6,32 +6,32 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.ModList;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.loading.FMLLoader;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.ModList;
+import net.neoforged.fml.loading.FMLLoader;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredRegister;
+import org.jetbrains.annotations.ApiStatus;
 import org.jetbrains.annotations.NotNull;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-@SuppressWarnings("unused")
+//@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+//@SuppressWarnings("unused")
 public class CreateFramedTabs {
     private static final DeferredRegister<CreativeModeTab> REGISTER =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, CreateFramedMod.ID);
     
-    public static final RegistryObject<CreativeModeTab> CREATE_FRAMED = REGISTER.register("create_framed",
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CREATE_FRAMED = REGISTER.register("create_framed",
             () -> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.createframed.create_framed"))
                     .withTabsBefore(CreativeModeTabs.SPAWN_EGGS)
                     .icon(CreateFramedBlocks.RED.getTiledGlassPane()::asStack)
                     .displayItems(new ItemsGenerator())
                     .build());
-    
+
     public static class ItemsGenerator implements CreativeModeTab.DisplayItemsGenerator {
         
         @Override
-        public void accept(CreativeModeTab.@NotNull ItemDisplayParameters p, CreativeModeTab.Output o) {
+        public void accept(CreativeModeTab.@NotNull ItemDisplayParameters p, CreativeModeTab.@NotNull Output o) {
             // Alex's Caves
             if (ModList.get().isLoaded("alexscaves") || !FMLLoader.isProduction()) {
                 for (AlexsCavesModule module : AlexsCavesModule.values()) {
@@ -72,7 +72,8 @@ public class CreateFramedTabs {
         }
     }
 
-    public static void register(IEventBus bus) {
-        REGISTER.register(bus);
+    @ApiStatus.Internal
+    public static void register(IEventBus modEventBus) {
+        REGISTER.register(modEventBus);
     }
 }

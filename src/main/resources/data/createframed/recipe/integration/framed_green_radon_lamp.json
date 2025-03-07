@@ -1,0 +1,15 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alexscaves"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "alexscaves:radon_lamp_green"
+  },
+  "result": {
+    "id": "createframed:framed_radon_lamp_green"
+  }
+}

@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "tag": "forge:glass/light_gray"
-  },
-  "result": "createframed:light_gray_stained_framed_glass"
-}

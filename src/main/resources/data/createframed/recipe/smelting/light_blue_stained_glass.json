@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "cookingtime": 50,
+  "experience": 0.0,
+  "ingredient": {
+    "tag": "createframed:light_blue/glass"
+  },
+  "result": {
+    "id": "minecraft:light_blue_stained_glass"
+  }
+}

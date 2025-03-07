@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "c:glass_blocks/green"
+  },
+  "result": {
+    "id": "createframed:green_stained_framed_glass"
+  }
+}

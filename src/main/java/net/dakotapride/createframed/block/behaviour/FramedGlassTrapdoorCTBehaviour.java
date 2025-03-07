@@ -1,6 +1,5 @@
 package net.dakotapride.createframed.block.behaviour;
 
-import com.simibubi.create.AllSpriteShifts;
 import com.simibubi.create.content.decoration.TrapdoorCTBehaviour;
 import com.simibubi.create.foundation.block.connected.CTSpriteShiftEntry;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;

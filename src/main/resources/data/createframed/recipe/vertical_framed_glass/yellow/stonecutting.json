@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "c:glass_blocks/yellow"
+  },
+  "result": {
+    "id": "createframed:vertical_yellow_stained_framed_glass"
+  }
+}

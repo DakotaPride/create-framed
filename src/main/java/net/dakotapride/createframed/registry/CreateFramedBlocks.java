@@ -20,8 +20,8 @@ import net.dakotapride.createframed.compat.AlexsCavesModule;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.GlassBlock;
 import net.minecraft.world.level.block.TintedGlassBlock;
+import net.minecraft.world.level.block.TransparentBlock;
 import net.minecraft.world.level.material.MapColor;
 
 import java.util.function.Supplier;
@@ -97,7 +97,7 @@ public enum CreateFramedBlocks {
     public BlockEntry<ConnectedGlassBlock> glass_block;
     public BlockEntry<ConnectedGlassBlock> vertical_glass_block;
     public BlockEntry<ConnectedGlassBlock> horizontal_glass_block;
-    public BlockEntry<GlassBlock> tiled_glass;
+    public BlockEntry<TransparentBlock> tiled_glass;
     public BlockEntry<ConnectedGlassPaneBlock> glass_pane;
     public BlockEntry<ConnectedGlassPaneBlock> vertical_glass_pane;
     public BlockEntry<ConnectedGlassPaneBlock> horizontal_glass_pane;
@@ -136,7 +136,7 @@ public enum CreateFramedBlocks {
         return horizontal_glass_block;
     }
 
-    public BlockEntry<GlassBlock> getTiledGlassBlock() {
+    public BlockEntry<TransparentBlock> getTiledGlassBlock() {
         return tiled_glass;
     }
 

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "minecraft:wooden_doors"
+    },
+    {
+      "item": "createframed:gray_stained_framed_glass"
+    }
+  ],
+  "result": {
+    "id": "createframed:gray_stained_framed_glass_door"
+  }
+}

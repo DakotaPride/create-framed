@@ -130,8 +130,8 @@ public class CreateFramedBuilderTransformers {
                 .register();
     }
 
-    public static BlockEntry<GlassBlock> colouredTiledGlass(String colourType) {
-        return REGISTRATE.block(colourType + "_stained_tiled_glass", GlassBlock::new)
+    public static BlockEntry<TransparentBlock> colouredTiledGlass(String colourType) {
+        return REGISTRATE.block(colourType + "_stained_tiled_glass", TransparentBlock::new)
                 .initialProperties(() -> Blocks.GLASS)
                 .addLayer(() -> RenderType::translucent)
                 .simpleItem()

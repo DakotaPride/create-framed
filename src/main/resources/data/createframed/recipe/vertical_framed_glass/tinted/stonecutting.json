@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "c:glass_blocks/tinted"
+  },
+  "result": {
+    "id": "createframed:vertical_tinted_framed_glass"
+  }
+}

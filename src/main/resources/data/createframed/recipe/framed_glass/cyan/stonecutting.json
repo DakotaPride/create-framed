@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "c:glass_blocks/cyan"
+  },
+  "result": {
+    "id": "createframed:cyan_stained_framed_glass"
+  }
+}
