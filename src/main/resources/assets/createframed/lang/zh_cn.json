@@ -1,27 +1,18 @@
 {
   "itemGroup.createframed.create_framed": "机械动力：多彩边框",
 
-  // Start v1.5 translations
-
-  "block.createframed.copper_window": "Copper Window",
-  "block.createframed.copper_window_pane": "Copper Window Pane",
-  "block.createframed.zinc_window": "Zinc Window",
-  "block.createframed.zinc_window_pane": "Zinc Window Pane",
-  "block.createframed.brass_window": "Brass Window",
-  "block.createframed.brass_window_pane": "Brass Window Pane",
-  "block.createframed.rose_quartz_window": "Rose Quartz Window",
-  "block.createframed.rose_quartz_window_pane": "Rose Quartz Window Pane",
-  "block.createframed.andesite_alloy_window": "Andesite Alloy Window",
-  "block.createframed.andesite_alloy_window_pane": "Andesite Alloy Window Pane",
-
-  // End
-
-  // start v1.5.7 translations
-
-  "block.createframed.cardboard_window": "Cardboard Peephole",
-  "block.createframed.cardboard_window_pane": "Cardboard Peephole Pane",
-
-  // End
+  "block.createframed.copper_window": "铜窗户",
+  "block.createframed.copper_window_pane": "铜窗户板",
+  "block.createframed.zinc_window": "锌窗户",
+  "block.createframed.zinc_window_pane": "锌窗户板",
+  "block.createframed.brass_window": "黄铜窗户",
+  "block.createframed.brass_window_pane": "黄铜窗户板",
+  "block.createframed.rose_quartz_window": "玫瑰石英窗户",
+  "block.createframed.rose_quartz_window_pane": "玫瑰石英窗户板",
+  "block.createframed.andesite_alloy_window": "安山窗户",
+  "block.createframed.andesite_alloy_window_pane": "安山窗户板",
+  "block.createframed.cardboard_window": "纸板猫眼",
+  "block.createframed.cardboard_window_pane": "纸板猫眼板",
 
   "block.createframed.red_stained_framed_glass": "红色边框玻璃",
   "block.createframed.orange_stained_framed_glass": "橙色边框玻璃",
@@ -29,7 +20,7 @@
   "block.createframed.green_stained_framed_glass": "绿色边框玻璃",
   "block.createframed.lime_stained_framed_glass": "黄绿色边框玻璃",
   "block.createframed.blue_stained_framed_glass": "蓝色边框玻璃",
-  "block.createframed.light_blue_stained_framed_glass": "浅蓝色边框玻璃",
+  "block.createframed.light_blue_stained_framed_glass": "淡蓝色边框玻璃",
   "block.createframed.cyan_stained_framed_glass": "青色边框玻璃",
   "block.createframed.purple_stained_framed_glass": "紫色边框玻璃",
   "block.createframed.magenta_stained_framed_glass": "品红色边框玻璃",
@@ -47,7 +38,7 @@
   "block.createframed.horizontal_green_stained_framed_glass": "绿色水平边框玻璃",
   "block.createframed.horizontal_lime_stained_framed_glass": "黄绿色水平边框玻璃",
   "block.createframed.horizontal_blue_stained_framed_glass": "蓝色水平边框玻璃",
-  "block.createframed.horizontal_light_blue_stained_framed_glass": "浅蓝色水平边框玻璃",
+  "block.createframed.horizontal_light_blue_stained_framed_glass": "淡蓝色水平边框玻璃",
   "block.createframed.horizontal_cyan_stained_framed_glass": "青色水平边框玻璃",
   "block.createframed.horizontal_purple_stained_framed_glass": "紫色水平边框玻璃",
   "block.createframed.horizontal_magenta_stained_framed_glass": "品红色水平边框玻璃",
@@ -203,22 +194,21 @@
   "block.createframed.brown_stained_framed_glass_trapdoor": "棕色边框玻璃活板门",
   "block.createframed.tinted_framed_glass_trapdoor": "透光边框玻璃活板门",
 
-  // Alex's Caves
-  "block.createframed.framed_radon_lamp_red": "Framed Red Radon Lamp",
-  "block.createframed.framed_radon_lamp_orange": "Framed Orange Radon Lamp",
-  "block.createframed.framed_radon_lamp_yellow": "Framed Yellow Radon Lamp",
-  "block.createframed.framed_radon_lamp_green": "Framed Green Radon Lamp",
-  "block.createframed.framed_radon_lamp_lime": "Framed Lime Radon Lamp",
-  "block.createframed.framed_radon_lamp_blue": "Framed Blue Radon Lamp",
-  "block.createframed.framed_radon_lamp_light_blue": "Framed Light Blue Radon Lamp",
-  "block.createframed.framed_radon_lamp_cyan": "Framed Cyan Radon Lamp",
-  "block.createframed.framed_radon_lamp_purple": "Framed Purple Radon Lamp",
-  "block.createframed.framed_radon_lamp_magenta": "Framed Magenta Radon Lamp",
-  "block.createframed.framed_radon_lamp_pink": "Framed Pink Radon Lamp",
-  "block.createframed.framed_radon_lamp_black": "Framed Black Radon Lamp",
-  "block.createframed.framed_radon_lamp_gray": "Framed Gray Radon Lamp",
-  "block.createframed.framed_radon_lamp_light_gray": "Framed Light Gray Radon Lamp",
-  "block.createframed.framed_radon_lamp_white": "Framed White Radon Lamp",
-  "block.createframed.framed_radon_lamp_brown": "Framed Brown Radon Lamp",
-  "text.createframed.mod_missing.alexs_caves": "Missing mod: Alex's Caves"
+  "block.createframed.framed_radon_lamp_red": "红色边框氡灯",
+  "block.createframed.framed_radon_lamp_orange": "橙色边框氡灯",
+  "block.createframed.framed_radon_lamp_yellow": "黄色边框氡灯",
+  "block.createframed.framed_radon_lamp_green": "绿色边框氡灯",
+  "block.createframed.framed_radon_lamp_lime": "黄绿色边框氡灯",
+  "block.createframed.framed_radon_lamp_blue": "蓝色边框氡灯",
+  "block.createframed.framed_radon_lamp_light_blue": "淡蓝色边框氡灯",
+  "block.createframed.framed_radon_lamp_cyan": "青色边框氡灯",
+  "block.createframed.framed_radon_lamp_purple": "紫色边框氡灯",
+  "block.createframed.framed_radon_lamp_magenta": "品红色边框氡灯",
+  "block.createframed.framed_radon_lamp_pink": "粉红色边框氡灯",
+  "block.createframed.framed_radon_lamp_black": "黑色边框氡灯",
+  "block.createframed.framed_radon_lamp_gray": "灰色边框氡灯",
+  "block.createframed.framed_radon_lamp_light_gray": "淡灰色边框氡灯",
+  "block.createframed.framed_radon_lamp_white": "白色边框氡灯",
+  "block.createframed.framed_radon_lamp_brown": "棕色边框氡灯",
+  "text.createframed.mod_missing.alexs_caves": "缺少模组：Alex的洞穴"
 }
