@@ -12,7 +12,7 @@
   ],
   "result": {
     "count": 16,
-    "id": "createframed:cardboard_window_pane"
+    "item": "createframed:cardboard_window_pane"
   },
   "show_notification": true
 }
