@@ -1,0 +1,6 @@
+Translations/Contributed to Localisation
+
+J1aYile, zhangjiuguan233 - Contributed/Translated mod into zh_cn (Chinese Simplified [Mainland China; Mandarin])
+wenwen357951 - Translated mod into zh_tw (Chinese Traditional [Taiwan; Mandarin])
+GermanHex, mpustovoi, MonsieurFeb - Contributed/Translated mod into ru_ru (Russian)
+Konuma Takaki - Translated mod into ja_jp (Japanese)
