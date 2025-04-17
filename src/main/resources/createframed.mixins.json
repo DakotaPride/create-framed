@@ -9,8 +9,7 @@
     "ChainConveyorFrogportTargetMixin",
     "ChainConveyorInteractionHandlerMixin",
     "PackagePortTargetSelectionHandlerMixin",
-    "PackagerBlockMixin",
-    "access.PackagePortBlockEntityAccessor"
+    "PackagerBlockMixin"
   ],
   "client": [],
   "injectors": {

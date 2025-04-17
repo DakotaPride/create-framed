@@ -6,6 +6,7 @@ import com.simibubi.create.content.logistics.packagePort.frogport.FrogportVisual
 import com.simibubi.create.foundation.data.SharedProperties;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import com.tterrag.registrate.util.nullness.NonNullFunction;
+import net.dakotapride.createframed.block.frogport.DyedFrogportBlock;
 import net.dakotapride.createframed.block.frogport.colour.*;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.SoundType;
@@ -27,9 +28,9 @@ public enum CreateFramedFrogports {
 
     ;
 
-    public final BlockEntry<FrogportBlock> frogport;
+    public final BlockEntry<DyedFrogportBlock> frogport;
 
-    CreateFramedFrogports(MapColor color, NonNullFunction<BlockBehaviour.Properties, FrogportBlock> block) {
+    CreateFramedFrogports(MapColor color, NonNullFunction<BlockBehaviour.Properties, DyedFrogportBlock> block) {
         String id = name().toLowerCase(Locale.ROOT);
 
         frogport = REGISTRATE.block(id + "_package_frogport", block)
@@ -40,7 +41,7 @@ public enum CreateFramedFrogports {
                 .register();
     }
 
-    public BlockEntry<FrogportBlock> getFrogport() {
+    public BlockEntry<DyedFrogportBlock> getFrogport() {
         return frogport;
     }
 

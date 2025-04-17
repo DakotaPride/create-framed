@@ -102,8 +102,8 @@ public class CreateFramedMod {
     }
 
     @SubscribeEvent
-    public static void registerCapabilities(RegisterCapabilitiesEvent event) {
-        DyedFrogportBlockEntity.registerCapabilities(event);
+    public  void registerCapabilities(RegisterCapabilitiesEvent event) {
+        DyedFrogportBlockEntity.capabilities(event);
     }
 
     public static void clientInit(final FMLClientSetupEvent event) {
