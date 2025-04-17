@@ -39,6 +39,10 @@ public class CreateFramedTabs {
                 }
             }
 
+            for (CreateFramedFrogports frogports : CreateFramedFrogports.values()) {
+                o.accept(frogports.getFrogport());
+            }
+
             for (CreateFramedWindows windows : CreateFramedWindows.values()) {
                 o.accept(windows.getWindowBlock());
                 o.accept(windows.getWindowPaneBlock());

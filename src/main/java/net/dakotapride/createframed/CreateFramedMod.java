@@ -6,19 +6,26 @@ import com.simibubi.create.foundation.item.ItemDescription;
 import com.simibubi.create.foundation.item.KineticStats;
 import com.simibubi.create.foundation.item.TooltipModifier;
 import net.createmod.catnip.lang.FontHelper;
-import net.dakotapride.createframed.registry.CreateFramedBlocks;
-import net.dakotapride.createframed.registry.CreateFramedEntityTypes;
-import net.dakotapride.createframed.registry.CreateFramedTabs;
+import net.createmod.ponder.foundation.PonderIndex;
+import net.dakotapride.createframed.block.frogport.DyedFrogportBlockEntity;
+import net.dakotapride.createframed.registry.*;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.Block;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.fml.event.lifecycle.InterModEnqueueEvent;
 import net.neoforged.fml.event.lifecycle.InterModProcessEvent;
+import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import org.slf4j.Logger;
 
@@ -36,10 +43,18 @@ public class CreateFramedMod {
         return ResourceLocation.fromNamespaceAndPath(ID, path);
     }
 
+    public static TagKey<Item> FROGPORTS = TagKey.create(Registries.ITEM, asResource("frogports"));
+    public static TagKey<Block> FROGPORT_BLOCKS = TagKey.create(Registries.BLOCK, asResource("frogports"));
+
+    public static boolean matches(ItemStack stack, TagKey<Item> tag) {
+        return stack.is(tag);
+    }
+
     static {
         REGISTRATE.setTooltipModifierFactory(item -> new ItemDescription.Modifier(item, FontHelper.Palette.STANDARD_CREATE)
                 .andThen(TooltipModifier.mapNull(KineticStats.create(item))));
     }
+
     public CreateFramedMod(IEventBus bus, ModContainer modContainer) {
         //ModLoadingContext modLoadingContext = ModLoadingContext.get();
 
@@ -61,6 +76,7 @@ public class CreateFramedMod {
 
         // Register ourselves for server and other game events we are interested in
         //NeoForge.EVENT_BUS.register(this);
+        bus.addListener(CreateFramedMod::clientInit);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
@@ -83,6 +99,20 @@ public class CreateFramedMod {
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
         // Do something when the server starts
+    }
+
+    @SubscribeEvent
+    public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+        DyedFrogportBlockEntity.registerCapabilities(event);
+    }
+
+    public static void clientInit(final FMLClientSetupEvent event) {
+        CreateFramedPartialModels.register();
+
+
+        //AllPonderTags.register();
+        //PonderIndex.register();
+        PonderIndex.addPlugin(new CreateFramedPonderScenes.UtiliseBaseCreatePonderScenePlugin());
     }
 
 }

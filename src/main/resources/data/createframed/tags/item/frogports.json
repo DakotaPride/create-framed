@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "create:package_frogport",
+    "createframed:red_package_frogport",
+    "createframed:orange_package_frogport",
+    "createframed:yellow_package_frogport",
+    "createframed:green_package_frogport",
+    "createframed:blue_package_frogport",
+    "createframed:purple_package_frogport"
+  ]
+}
