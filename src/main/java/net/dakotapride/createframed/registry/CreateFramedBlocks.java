@@ -240,7 +240,6 @@ public enum CreateFramedBlocks {
 
     public static void register() {
         CreateFramedWindows.register();
-        CreateFramedFrogports.register();
 
         // Alex's Caves
         AlexsCavesModule.register();

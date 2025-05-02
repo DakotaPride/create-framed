@@ -4,13 +4,7 @@
   "package": "net.dakotapride.createframed.mixin",
   "compatibilityLevel": "JAVA_16",
   "refmap": "createframed.refmap.json",
-  "mixins": [
-    "ChainConveyorBlockMixin",
-    "ChainConveyorFrogportTargetMixin",
-    "ChainConveyorInteractionHandlerMixin",
-    "PackagePortTargetSelectionHandlerMixin",
-    "PackagerBlockMixin"
-  ],
+  "mixins": [],
   "client": [],
   "injectors": {
     "defaultRequire": 1

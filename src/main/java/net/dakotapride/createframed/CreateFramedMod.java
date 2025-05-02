@@ -7,8 +7,9 @@ import com.simibubi.create.foundation.item.KineticStats;
 import com.simibubi.create.foundation.item.TooltipModifier;
 import net.createmod.catnip.lang.FontHelper;
 import net.createmod.ponder.foundation.PonderIndex;
-import net.dakotapride.createframed.block.frogport.DyedFrogportBlockEntity;
-import net.dakotapride.createframed.registry.*;
+import net.dakotapride.createframed.registry.CreateFramedBlocks;
+import net.dakotapride.createframed.registry.CreateFramedEntityTypes;
+import net.dakotapride.createframed.registry.CreateFramedTabs;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -25,7 +26,6 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.fml.event.lifecycle.InterModEnqueueEvent;
 import net.neoforged.fml.event.lifecycle.InterModProcessEvent;
-import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import org.slf4j.Logger;
 
@@ -76,7 +76,6 @@ public class CreateFramedMod {
 
         // Register ourselves for server and other game events we are interested in
         //NeoForge.EVENT_BUS.register(this);
-        bus.addListener(CreateFramedMod::clientInit);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
@@ -99,20 +98,6 @@ public class CreateFramedMod {
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
         // Do something when the server starts
-    }
-
-    @SubscribeEvent
-    public  void registerCapabilities(RegisterCapabilitiesEvent event) {
-        DyedFrogportBlockEntity.capabilities(event);
-    }
-
-    public static void clientInit(final FMLClientSetupEvent event) {
-        CreateFramedPartialModels.register();
-
-
-        //AllPonderTags.register();
-        //PonderIndex.register();
-        PonderIndex.addPlugin(new CreateFramedPonderScenes.UtiliseBaseCreatePonderScenePlugin());
     }
 
 }
