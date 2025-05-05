@@ -6,7 +6,6 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
 
-@SuppressWarnings("deprecation")
 public class TintedConnectedGlassBlock extends ConnectedGlassBlock {
     public TintedConnectedGlassBlock(Properties p_i48392_1_) {
         super(p_i48392_1_);

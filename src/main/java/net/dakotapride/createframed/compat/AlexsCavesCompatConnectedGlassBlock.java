@@ -6,11 +6,13 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.level.block.Block;
 import net.neoforged.fml.ModList;
 
 import java.util.List;
 
-public class AlexsCavesCompatConnectedGlassBlock extends ConnectedGlassBlock {
+// Why are we extending a glass block when this is a fully opaque block? Not see through? YOU CAN'T SEE THROUGH THIS SHI-
+public class AlexsCavesCompatConnectedGlassBlock extends Block {
     public AlexsCavesCompatConnectedGlassBlock(Properties properties) {
         super(properties);
     }

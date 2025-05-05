@@ -16,10 +16,7 @@ import com.tterrag.registrate.util.nullness.NonNullConsumer;
 import com.tterrag.registrate.util.nullness.NonNullFunction;
 import com.tterrag.registrate.util.nullness.NonNullUnaryOperator;
 import net.dakotapride.createframed.CreateFramedMod;
-import net.dakotapride.createframed.block.TintedConnectedGlassBlock;
-import net.dakotapride.createframed.block.TintedConnectedGlassPaneBlock;
-import net.dakotapride.createframed.block.TintedFramedGlassTrapdoorBlock;
-import net.dakotapride.createframed.block.TintedGlassPaneBlock;
+import net.dakotapride.createframed.block.*;
 import net.dakotapride.createframed.block.behaviour.FramedDoorMovingInteraction;
 import net.dakotapride.createframed.block.behaviour.FramedGlassTrapdoorCTBehaviour;
 import net.dakotapride.createframed.block.behaviour.FramedSlidingDoorMovementBehaviour;
@@ -28,6 +25,7 @@ import net.dakotapride.createframed.block.door.TintedFramedGlassSlidingDoorBlock
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -102,22 +100,22 @@ public class CreateFramedBuilderTransformers {
                 .register();
     }
 
-    public static BlockEntry<ConnectedGlassBlock> verticalColouredFramedGlass(String name,
+    public static BlockEntry<ConnectedFramedGlassBlock> verticalColouredFramedGlass(String name,
                                                                               Supplier<ConnectedTextureBehaviour> behaviour,
-                                                                              Block stainedBlock) {
-        return colouredFramedGlass("vertical_" + name, behaviour, stainedBlock);
+                                                                              Block stainedBlock, DyeColor dyeColour) {
+        return colouredFramedGlass("vertical_" + name, behaviour, stainedBlock, dyeColour);
     }
 
-    public static BlockEntry<ConnectedGlassBlock> horizontalColouredFramedGlass(String name,
+    public static BlockEntry<ConnectedFramedGlassBlock> horizontalColouredFramedGlass(String name,
                                                                               Supplier<ConnectedTextureBehaviour> behaviour,
-                                                                              Block stainedBlock) {
-        return colouredFramedGlass("horizontal_" + name, behaviour, stainedBlock);
+                                                                              Block stainedBlock, DyeColor dyeColour) {
+        return colouredFramedGlass("horizontal_" + name, behaviour, stainedBlock, dyeColour);
     }
 
-    public static BlockEntry<ConnectedGlassBlock> colouredFramedGlass(String name,
+    public static BlockEntry<ConnectedFramedGlassBlock> colouredFramedGlass(String name,
                                                                       Supplier<ConnectedTextureBehaviour> behaviour,
-                                                                      Block stainedBlock) {
-        return REGISTRATE.block(name + "_stained_framed_glass", ConnectedGlassBlock::new)
+                                                                      Block stainedBlock, DyeColor dyeColour) {
+        return REGISTRATE.block(name + "_stained_framed_glass", p -> new ConnectedFramedGlassBlock(dyeColour, p))
                 .onRegister(connectedTextures(behaviour))
                 .addLayer(() -> RenderType::translucent)
                 .initialProperties(() -> stainedBlock)
@@ -164,7 +162,8 @@ public class CreateFramedBuilderTransformers {
 
     public static <B extends FramedGlassSlidingDoorBlock, P> NonNullUnaryOperator<BlockBuilder<B, P>> slidingDoor(String type) {
         return b -> b.initialProperties(() -> Blocks.OAK_DOOR) // for villager AI..
-                .properties(p -> p.strength(3.0F, 6.0F))
+                .properties(p -> p.strength(3.0F, 6.0F)
+                        .isViewBlocking(CreateFramedBuilderTransformers::never))
                 .addLayer(() -> RenderType::translucent)
                 .onRegister(interactionBehaviour(new FramedDoorMovingInteraction()))
                 .onRegister(movementBehaviour(new FramedSlidingDoorMovementBehaviour()))
@@ -173,7 +172,8 @@ public class CreateFramedBuilderTransformers {
 
     public static <B extends TintedFramedGlassSlidingDoorBlock, P> NonNullUnaryOperator<BlockBuilder<B, P>> tintedSlidingDoor(String type) {
         return b -> b.initialProperties(() -> Blocks.OAK_DOOR) // for villager AI..
-                .properties(p -> p.strength(3.0F, 6.0F))
+                .properties(p -> p.strength(3.0F, 6.0F)
+                        .isViewBlocking(CreateFramedBuilderTransformers::never))
                 .addLayer(() -> RenderType::translucent)
                 .onRegister(interactionBehaviour(new FramedDoorMovingInteraction()))
                 .onRegister(movementBehaviour(new FramedSlidingDoorMovementBehaviour()))
@@ -184,18 +184,16 @@ public class CreateFramedBuilderTransformers {
     public static BlockEntry<FramedGlassSlidingDoorBlock> framedGlassSlidingDoor(String type, MapColor colour) {
         return REGISTRATE.block(type + "_stained_framed_glass_door", FramedGlassSlidingDoorBlock::new)
                 .initialProperties(AllBlocks.FRAMED_GLASS_DOOR)
-                .properties(p -> p.sound(SoundType.GLASS).mapColor(colour))
+                .properties(p -> p.sound(SoundType.GLASS).mapColor(colour).noOcclusion())
                 .transform(CreateFramedBuilderTransformers.slidingDoor(type))
-                .properties(BlockBehaviour.Properties::noOcclusion)
                 .register();
     }
 
     public static BlockEntry<TintedFramedGlassSlidingDoorBlock> tintedFramedGlassSlidingDoor(String type, MapColor colour) {
         return REGISTRATE.block(type + "_door", TintedFramedGlassSlidingDoorBlock::new)
                 .initialProperties(AllBlocks.FRAMED_GLASS_DOOR)
-                .properties(p -> p.sound(SoundType.GLASS).mapColor(colour))
+                .properties(p -> p.sound(SoundType.GLASS).mapColor(colour).noOcclusion())
                 .transform(CreateFramedBuilderTransformers.tintedSlidingDoor(type))
-                .properties(BlockBehaviour.Properties::noOcclusion)
                 .register();
     }
 
