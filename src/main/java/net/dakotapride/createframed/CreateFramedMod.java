@@ -43,9 +43,6 @@ public class CreateFramedMod {
         return ResourceLocation.fromNamespaceAndPath(ID, path);
     }
 
-    public static TagKey<Item> FROGPORTS = TagKey.create(Registries.ITEM, asResource("frogports"));
-    public static TagKey<Block> FROGPORT_BLOCKS = TagKey.create(Registries.BLOCK, asResource("frogports"));
-
     public static boolean matches(ItemStack stack, TagKey<Item> tag) {
         return stack.is(tag);
     }
