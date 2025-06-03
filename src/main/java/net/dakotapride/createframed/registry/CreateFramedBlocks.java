@@ -1,5 +1,7 @@
 package net.dakotapride.createframed.registry;
 
+import com.simibubi.create.content.decoration.CardboardBlock;
+import com.simibubi.create.content.decoration.CardboardBlockItem;
 import com.simibubi.create.content.decoration.TrainTrapdoorBlock;
 import com.simibubi.create.content.decoration.palettes.ConnectedGlassBlock;
 import com.simibubi.create.content.decoration.palettes.ConnectedGlassPaneBlock;
@@ -14,15 +16,15 @@ import net.dakotapride.createframed.block.*;
 import net.dakotapride.createframed.block.door.FramedGlassSlidingDoorBlock;
 import net.dakotapride.createframed.block.door.TintedFramedGlassSlidingDoorBlock;
 import net.dakotapride.createframed.compat.AlexsCavesModule;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.TintedGlassBlock;
-import net.minecraft.world.level.block.TransparentBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.material.MapColor;
 
 import java.util.function.Supplier;
+
+import static net.dakotapride.createframed.CreateFramedMod.REGISTRATE;
 
 public enum CreateFramedBlocks {
     RED(() -> CreateFramedSpriteShifts.RED_STAINED_FRAMED_GLASS,
@@ -102,6 +104,8 @@ public enum CreateFramedBlocks {
     public BlockEntry<GlassPaneBlock> tiled_glass_pane;
     public BlockEntry<FramedGlassSlidingDoorBlock> glass_door;
     public BlockEntry<TrainTrapdoorBlock> glass_trapdoor;
+    public BlockEntry<CardboardBlock> cardboard_block;
+    public BlockEntry<CardboardBlock> bound_cardboard_block;
 
     CreateFramedBlocks(Supplier<CTSpriteShiftEntry> basic_ctshift,
                        Supplier<CTSpriteShiftEntry> vertical_ctshift,
@@ -120,6 +124,8 @@ public enum CreateFramedBlocks {
         tiled_glass_pane = CreateFramedBuilderTransformers.colouredTiledGlassPane(name);
         glass_door = CreateFramedBuilderTransformers.framedGlassSlidingDoor(name, template_block.defaultMapColor());
         glass_trapdoor = CreateFramedBuilderTransformers.framedGlassTrapdoor(name, template_block.defaultMapColor(), basic_ctshift.get());
+        cardboard_block = REGISTRATE.block(name + "_cardboard_block", CardboardBlock::new).initialProperties(() -> Blocks.MUSHROOM_STEM).properties(p -> p.sound(SoundType.CHISELED_BOOKSHELF).ignitedByLava().mapColor(template_block.defaultMapColor())).item(CardboardBlockItem::new).build().register();
+        bound_cardboard_block = REGISTRATE.block("bound_" + name + "_cardboard_block", CardboardBlock::new).initialProperties(() -> Blocks.MUSHROOM_STEM).properties(p -> p.sound(SoundType.CHISELED_BOOKSHELF).ignitedByLava().mapColor(template_block.defaultMapColor())).item(CardboardBlockItem::new).build().register();
     }
 
     public BlockEntry<ConnectedFramedGlassBlock> getGlassBlock() {
@@ -160,6 +166,14 @@ public enum CreateFramedBlocks {
 
     public BlockEntry<TrainTrapdoorBlock> getGlassTrapdoorBlock() {
         return glass_trapdoor;
+    }
+
+    public BlockEntry<CardboardBlock> getCardboardBlock() {
+        return cardboard_block;
+    }
+
+    public BlockEntry<CardboardBlock> getBoundCardboardBlock() {
+        return bound_cardboard_block;
     }
 
     /* Tinted Blocks */
@@ -238,6 +252,7 @@ public enum CreateFramedBlocks {
 
     public static void register() {
         CreateFramedWindows.register();
+        MiscBlocks.register();
 
         // Alex's Caves
         AlexsCavesModule.register();

@@ -69,6 +69,17 @@ public class CreateFramedTabs {
             o.accept(CreateFramedBlocks.TINTED.getHorizontalTintedGlassPane());
             o.accept(CreateFramedBlocks.TINTED.getVerticalTintedGlass());
             o.accept(CreateFramedBlocks.TINTED.getVerticalTintedGlassPane());
+
+            for (CreateFramedBlocks blocks : CreateFramedBlocks.values())
+                if (blocks != CreateFramedBlocks.TINTED) {
+                    o.accept(blocks.getCardboardBlock());
+                    o.accept(blocks.getBoundCardboardBlock());
+                }
+            o.accept(MiscBlocks.KARPBOARD_BLOCK.asItem());
+            o.accept(MiscBlocks.SHINY_KARPBOARD_BLOCK.asItem());
+
+            for (CreateFramedPackageStyles.Items items : CreateFramedPackageStyles.Items.values())
+                o.accept(items.getPackageItem());
         }
     }
 

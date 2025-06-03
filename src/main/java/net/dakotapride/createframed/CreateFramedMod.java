@@ -9,6 +9,7 @@ import net.createmod.catnip.lang.FontHelper;
 import net.createmod.ponder.foundation.PonderIndex;
 import net.dakotapride.createframed.registry.CreateFramedBlocks;
 import net.dakotapride.createframed.registry.CreateFramedEntityTypes;
+import net.dakotapride.createframed.registry.CreateFramedPackageStyles;
 import net.dakotapride.createframed.registry.CreateFramedTabs;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -60,6 +61,7 @@ public class CreateFramedMod {
         REGISTRATE.registerEventListeners(bus);
 
         CreateFramedBlocks.register();
+        CreateFramedPackageStyles.Items.register();
         CreateFramedEntityTypes.register();
         CreateFramedTabs.register(bus);
         // forgeBus.addListener(this::fillCreativeItemGroup);

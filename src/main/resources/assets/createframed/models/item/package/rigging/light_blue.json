@@ -1,0 +1,7 @@
+{
+  "parent": "create:item/package/rigging_10x8",
+  "textures": {
+    "0": "createframed:item/package/light_blue",
+    "particle": "createframed:block/light_blue_cardboard_block_front"
+  }
+}

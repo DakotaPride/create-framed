@@ -1,0 +1,7 @@
+{
+  "parent": "create:item/package/rigging_12x12",
+  "textures": {
+    "0": "createframed:item/package/karpboard",
+    "particle": "createframed:block/red_cardboard_block_front"
+  }
+}

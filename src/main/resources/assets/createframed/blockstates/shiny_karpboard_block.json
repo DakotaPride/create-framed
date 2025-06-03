@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "createframed:block/shiny_karpboard_block",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "createframed:block/shiny_karpboard_block"
+    },
+    "facing=south": {
+      "model": "createframed:block/shiny_karpboard_block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "createframed:block/shiny_karpboard_block",
+      "y": 270
+    }
+  }
+}
