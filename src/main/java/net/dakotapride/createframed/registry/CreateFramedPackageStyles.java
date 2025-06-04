@@ -32,6 +32,8 @@ public class CreateFramedPackageStyles {
         WHITE(),
         BROWN(),
         KARPBOARD(12, 12, 23, true),
+        FORDALELS(),
+        AXOLOTL_LUCY(),
 
 
 
@@ -56,7 +58,7 @@ public class CreateFramedPackageStyles {
             String name = name().toLowerCase(Locale.ROOT);
             package_item = REGISTRATE
                     .item(name + "_package", prop -> new PackageItem(prop,
-                            new PackageStyles.PackageStyle(name, 10, 8, 23, true)))
+                            new PackageStyles.PackageStyle(name, 10, 8, 18, true)))
                     .properties(prop -> prop.stacksTo(1))
                     .register();
         }

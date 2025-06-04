@@ -1,7 +1,7 @@
 {
   "parent": "create:block/connected_glass_pane/side_alt",
   "textures": {
-    "edge": "createframed:block/copper_window_top",
+    "edge": "minecraft:block/copper_block",
     "pane": "createframed:block/copper_window"
   }
 }

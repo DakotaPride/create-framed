@@ -1,0 +1,15 @@
+{
+  "type": "create:splashing",
+  "ingredients": [
+    {
+      "tag": "createframed:stained_tiled_glass_panes"
+    }
+  ],
+  "results": [
+    {
+      "item": {
+        "id": "create:tiled_glass_pane"
+      }
+    }
+  ]
+}

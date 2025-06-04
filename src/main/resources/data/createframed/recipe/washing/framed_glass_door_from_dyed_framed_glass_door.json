@@ -1,0 +1,15 @@
+{
+  "type": "create:splashing",
+  "ingredients": [
+    {
+      "tag": "createframed:stained_framed_glass_doors"
+    }
+  ],
+  "results": [
+    {
+      "item": {
+        "id": "create:framed_glass_door"
+      }
+    }
+  ]
+}

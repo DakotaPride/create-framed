@@ -17,11 +17,6 @@
     "#createframed:light_gray/glass",
     "#createframed:white/glass",
     "#createframed:brown/glass",
-    "#createframed:tinted/glass",
-    "createframed:andesite_alloy_window",
-    "createframed:brass_window",
-    "createframed:copper_window",
-    "createframed:rose_quartz_window",
-    "createframed:zinc_window"
+    "#createframed:tinted/glass"
   ]
 }

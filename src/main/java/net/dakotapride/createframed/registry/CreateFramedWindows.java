@@ -21,7 +21,27 @@ public enum CreateFramedWindows {
     //INDUSTRIAL_IRON(() -> CreateFramedSpriteShifts.INDUSTRIAL_IRON_WINDOW, Blocks.NETHERITE_BLOCK, true),
     ROSE_QUARTZ(() -> CreateFramedSpriteShifts.ROSE_QUARTZ_WINDOW, Blocks.RED_TERRACOTTA, false),
     BRASS(() -> CreateFramedSpriteShifts.BRASS_WINDOW, Blocks.YELLOW_TERRACOTTA, true),
-    CARDBOARD(() -> CreateFramedSpriteShifts.CARDBOARD_WINDOW, Blocks.WHITE_TERRACOTTA, true),;
+    CARDBOARD(() -> CreateFramedSpriteShifts.CARDBOARD_WINDOW, Blocks.WHITE_TERRACOTTA, true),
+    RED_CARDBOARD(() -> CreateFramedSpriteShifts.RED_CARDBOARD_WINDOW, Blocks.RED_TERRACOTTA, true),
+    ORANGE_CARDBOARD(() -> CreateFramedSpriteShifts.ORANGE_CARDBOARD_WINDOW, Blocks.ORANGE_TERRACOTTA, true),
+    YELLOW_CARDBOARD(() -> CreateFramedSpriteShifts.YELLOW_CARDBOARD_WINDOW, Blocks.YELLOW_TERRACOTTA, true),
+    GREEN_CARDBOARD(() -> CreateFramedSpriteShifts.GREEN_CARDBOARD_WINDOW, Blocks.GREEN_TERRACOTTA, true),
+    LIME_CARDBOARD(() -> CreateFramedSpriteShifts.LIME_CARDBOARD_WINDOW, Blocks.LIME_TERRACOTTA, true),
+    BLUE_CARDBOARD(() -> CreateFramedSpriteShifts.BLUE_CARDBOARD_WINDOW, Blocks.BLUE_TERRACOTTA, true),
+    LIGHT_BLUE_CARDBOARD(() -> CreateFramedSpriteShifts.LIGHT_BLUE_CARDBOARD_WINDOW, Blocks.LIGHT_BLUE_TERRACOTTA, true),
+    CYAN_CARDBOARD(() -> CreateFramedSpriteShifts.CYAN_CARDBOARD_WINDOW, Blocks.CYAN_TERRACOTTA, true),
+    PURPLE_CARDBOARD(() -> CreateFramedSpriteShifts.PURPLE_CARDBOARD_WINDOW, Blocks.PURPLE_TERRACOTTA, true),
+    MAGENTA_CARDBOARD(() -> CreateFramedSpriteShifts.MAGENTA_CARDBOARD_WINDOW, Blocks.MAGENTA_TERRACOTTA, true),
+    PINK_CARDBOARD(() -> CreateFramedSpriteShifts.PINK_CARDBOARD_WINDOW, Blocks.PINK_TERRACOTTA, true),
+    BLACK_CARDBOARD(() -> CreateFramedSpriteShifts.BLACK_CARDBOARD_WINDOW, Blocks.BLACK_TERRACOTTA, true),
+    GRAY_CARDBOARD(() -> CreateFramedSpriteShifts.GRAY_CARDBOARD_WINDOW, Blocks.GRAY_TERRACOTTA, true),
+    LIGHT_GRAY_CARDBOARD(() -> CreateFramedSpriteShifts.LIGHT_GRAY_CARDBOARD_WINDOW, Blocks.LIGHT_GRAY_TERRACOTTA, true),
+    WHITE_CARDBOARD(() -> CreateFramedSpriteShifts.WHITE_CARDBOARD_WINDOW, Blocks.WHITE_TERRACOTTA, true),
+    BROWN_CARDBOARD(() -> CreateFramedSpriteShifts.BROWN_CARDBOARD_WINDOW, Blocks.BROWN_TERRACOTTA, true),
+
+
+
+    ;
 
     private final ResourceLocation id;
     public final BlockEntry<WindowBlock> window_block;
