@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "#createframed:yellow/glass",
+    "#createframed:yellow/pane",
+    "createframed:yellow_stained_framed_glass_door",
+    "createframed:yellow_stained_framed_glass_trapdoor",
+    "createframed:yellow_cardboard_block",
+    "createframed:bound_yellow_cardboard_block",
+    "createframed:yellow_cardboard_window",
+    "createframed:yellow_cardboard_window_pane",
+    {
+      "require": false,
+      "id": "createframed:framed_radon_lamp_yellow"
+    }
+  ]
+}

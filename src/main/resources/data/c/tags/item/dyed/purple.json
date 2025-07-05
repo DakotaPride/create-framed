@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "#createframed:purple/glass",
+    "#createframed:purple/pane",
+    "createframed:purple_stained_framed_glass_door",
+    "createframed:purple_stained_framed_glass_trapdoor",
+    "createframed:purple_cardboard_block",
+    "createframed:bound_purple_cardboard_block",
+    "createframed:purple_cardboard_window",
+    "createframed:purple_cardboard_window_pane",
+    {
+      "require": false,
+      "id": "createframed:framed_radon_lamp_purple"
+    }
+  ]
+}

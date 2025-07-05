@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "#createframed:magenta/glass",
+    "#createframed:magenta/pane",
+    "createframed:magenta_stained_framed_glass_door",
+    "createframed:magenta_stained_framed_glass_trapdoor",
+    "createframed:magenta_cardboard_block",
+    "createframed:bound_magenta_cardboard_block",
+    "createframed:magenta_cardboard_window",
+    "createframed:magenta_cardboard_window_pane",
+    {
+      "require": false,
+      "id": "createframed:framed_radon_lamp_magenta"
+    }
+  ]
+}
