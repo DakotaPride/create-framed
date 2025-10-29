@@ -7,6 +7,7 @@ import com.simibubi.create.content.contraptions.elevator.ElevatorColumn;
 import com.simibubi.create.content.contraptions.elevator.ElevatorContraption;
 import com.simibubi.create.content.decoration.slidingDoor.DoorControl;
 import com.simibubi.create.content.decoration.slidingDoor.DoorControlBehaviour;
+import com.simibubi.create.content.decoration.slidingDoor.SlidingDoorBlockEntity;
 import com.simibubi.create.content.trains.entity.Carriage;
 import com.simibubi.create.content.trains.entity.CarriageContraptionEntity;
 import com.simibubi.create.content.trains.station.GlobalStation;
@@ -54,8 +55,7 @@ public class FramedSlidingDoorMovementBehaviour implements MovementBehaviour {
         if (!context.world.isClientSide())
             tickOpen(context, open);
 
-        Map<BlockPos, BlockEntity> tes = context.contraption.presentBlockEntities;
-        if (!(tes.get(context.localPos) instanceof FramedGlassSlidingDoorBlockEntity sdbe))
+        if (!(context.contraption.getBlockEntityClientSide(context.localPos) instanceof FramedGlassSlidingDoorBlockEntity sdbe))
             return;
         boolean wasSettled = sdbe.animation.settled();
         sdbe.animation.chase(open ? 1 : 0, .15f, LerpedFloat.Chaser.LINEAR);

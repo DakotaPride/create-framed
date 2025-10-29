@@ -1,7 +1,5 @@
 package net.dakotapride.createframed.registry;
 
-import com.simibubi.create.content.decoration.CardboardBlock;
-import com.simibubi.create.content.decoration.CardboardBlockItem;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import net.dakotapride.createframed.block.KarpboardBlock;
 import net.dakotapride.createframed.item.KarpboardBlockItem;
