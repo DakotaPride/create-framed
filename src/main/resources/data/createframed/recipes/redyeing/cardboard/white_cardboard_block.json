@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "create:cardboard_block"
+    },
+    "X": {
+      "item": "minecraft:white_dye"
+    }
+  },
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "result": {
+    "count": 8,
+    "item": "createframed:white_cardboard_block"
+  },
+  "show_notification": true
+}

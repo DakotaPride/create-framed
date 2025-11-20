@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
-  "count": 1,
   "ingredient": {
     "tag": "forge:glass/brown"
   },
-  "result": "createframed:brown_stained_tiled_glass"
+  "result": "createframed:brown_stained_tiled_glass",
+  "count": 1
 }

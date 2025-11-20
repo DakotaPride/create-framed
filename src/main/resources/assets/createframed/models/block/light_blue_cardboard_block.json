@@ -1,0 +1,10 @@
+
+{
+  "parent": "create:block/cardboard_block",
+  "textures": {
+    "0": "createframed:block/light_blue_cardboard_block_front",
+    "1": "createframed:block/light_blue_cardboard_block_side",
+    "2": "createframed:block/light_blue_cardboard_block_top",
+    "particle": "createframed:block/light_blue_cardboard_block_side"
+  }
+}

@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import net.dakotapride.createframed.registry.CreateFramedBlocks;
 import net.dakotapride.createframed.registry.CreateFramedEntityTypes;
+import net.dakotapride.createframed.registry.CreateFramedPackageStyles;
 import net.dakotapride.createframed.registry.CreateFramedTabs;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
@@ -35,6 +36,7 @@ public class CreateFramedMod {
         REGISTRATE.registerEventListeners(bus);
 
         CreateFramedBlocks.register();
+        CreateFramedPackageStyles.Items.register();
         CreateFramedEntityTypes.register();
         CreateFramedTabs.register(bus);
         // forgeBus.addListener(this::fillCreativeItemGroup);

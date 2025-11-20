@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "#createframed:white/glass",
+    "#createframed:white/pane",
+    "createframed:white_stained_framed_glass_door",
+    "createframed:white_stained_framed_glass_trapdoor",
+    "createframed:white_cardboard_block",
+    "createframed:bound_white_cardboard_block",
+    "createframed:white_cardboard_window",
+    "createframed:white_cardboard_window_pane",
+    {
+      "require": false,
+      "id": "createframed:framed_radon_lamp_white"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "type": "create:splashing",
+  "ingredients": [
+    {
+      "tag": "createframed:stained_framed_glass_trapdoors"
+    }
+  ],
+  "results": [
+    {
+      "item": "create:framed_glass_trapdoor"
+    }
+  ]
+}

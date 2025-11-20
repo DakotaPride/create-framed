@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "minecraft:magenta_dye"
+    },
+    {
+      "item": "createframed:cardboard_window"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "item": "createframed:magenta_cardboard_window"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "create:item/package/cardboard_10x8",
+  "textures": {
+    "0": "createframed:item/package/green",
+    "particle": "createframed:block/green_cardboard_block_front"
+  }
+}

@@ -67,8 +67,25 @@ public class CreateFramedSpriteShifts {
             BRASS_WINDOW = getCT(AllCTTypes.VERTICAL, "brass_window"),
             ROSE_QUARTZ_WINDOW = getCT(AllCTTypes.VERTICAL, "rose_quartz_window"),
             ANDESITE_ALLOY_WINDOW = getCT(AllCTTypes.VERTICAL, "andesite_alloy_window"),
-            CARDBOARD_WINDOW = getCT(AllCTTypes.HORIZONTAL_KRYPPERS, "cardboard_window");
-            //INDUSTRIAL_IRON_WINDOW = getCT(AllCTTypes.VERTICAL, "industrial_iron_window");
+            CARDBOARD_WINDOW = getCT(AllCTTypes.HORIZONTAL_KRYPPERS, "cardboard_window"),
+
+    RED_CARDBOARD_WINDOW = getCT(AllCTTypes.HORIZONTAL_KRYPPERS, "red_cardboard_window"),
+            ORANGE_CARDBOARD_WINDOW = getCT(AllCTTypes.HORIZONTAL_KRYPPERS, "orange_cardboard_window"),
+            YELLOW_CARDBOARD_WINDOW = getCT(AllCTTypes.HORIZONTAL_KRYPPERS, "yellow_cardboard_window"),
+            GREEN_CARDBOARD_WINDOW = getCT(AllCTTypes.HORIZONTAL_KRYPPERS, "green_cardboard_window"),
+            LIME_CARDBOARD_WINDOW = getCT(AllCTTypes.HORIZONTAL_KRYPPERS, "lime_cardboard_window"),
+            BLUE_CARDBOARD_WINDOW = getCT(AllCTTypes.HORIZONTAL_KRYPPERS, "blue_cardboard_window"),
+            LIGHT_BLUE_CARDBOARD_WINDOW = getCT(AllCTTypes.HORIZONTAL_KRYPPERS, "light_blue_cardboard_window"),
+            CYAN_CARDBOARD_WINDOW = getCT(AllCTTypes.HORIZONTAL_KRYPPERS, "cyan_cardboard_window"),
+            PURPLE_CARDBOARD_WINDOW = getCT(AllCTTypes.HORIZONTAL_KRYPPERS, "purple_cardboard_window"),
+            MAGENTA_CARDBOARD_WINDOW = getCT(AllCTTypes.HORIZONTAL_KRYPPERS, "magenta_cardboard_window"),
+            PINK_CARDBOARD_WINDOW = getCT(AllCTTypes.HORIZONTAL_KRYPPERS, "pink_cardboard_window"),
+            BLACK_CARDBOARD_WINDOW = getCT(AllCTTypes.HORIZONTAL_KRYPPERS, "black_cardboard_window"),
+            GRAY_CARDBOARD_WINDOW = getCT(AllCTTypes.HORIZONTAL_KRYPPERS, "gray_cardboard_window"),
+            LIGHT_GRAY_CARDBOARD_WINDOW = getCT(AllCTTypes.HORIZONTAL_KRYPPERS, "light_gray_cardboard_window"),
+            WHITE_CARDBOARD_WINDOW = getCT(AllCTTypes.HORIZONTAL_KRYPPERS, "white_cardboard_window"),
+            BROWN_CARDBOARD_WINDOW = getCT(AllCTTypes.HORIZONTAL_KRYPPERS, "brown_cardboard_window");
+    //INDUSTRIAL_IRON_WINDOW = getCT(AllCTTypes.VERTICAL, "industrial_iron_window");
     public static final CTSpriteShiftEntry
             RED_FRAMED_RADON_LAMP = omni("alexscaves/framed_radon_lamp_red"),
             ORANGE_FRAMED_RADON_LAMP = omni("alexscaves/framed_radon_lamp_orange"),

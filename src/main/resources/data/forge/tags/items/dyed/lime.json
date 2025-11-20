@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "#createframed:lime/glass",
+    "#createframed:lime/pane",
+    "createframed:lime_stained_framed_glass_door",
+    "createframed:lime_stained_framed_glass_trapdoor",
+    "createframed:lime_cardboard_block",
+    "createframed:bound_lime_cardboard_block",
+    "createframed:lime_cardboard_window",
+    "createframed:lime_cardboard_window_pane",
+    {
+      "require": false,
+      "id": "createframed:framed_radon_lamp_lime"
+    }
+  ]
+}

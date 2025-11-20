@@ -1,0 +1,16 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "item": "create:cardboard_block"
+    },
+    {
+      "tag": "minecraft:fishes"
+    }
+  ],
+  "results": [
+    {
+      "item": "createframed:karpboard_block"
+    }
+  ]
+}

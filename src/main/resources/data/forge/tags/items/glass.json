@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "#createframed:red/glass",
+    "#createframed:orange/glass",
+    "#createframed:yellow/glass",
+    "#createframed:green/glass",
+    "#createframed:lime/glass",
+    "#createframed:blue/glass",
+    "#createframed:light_blue/glass",
+    "#createframed:cyan/glass",
+    "#createframed:purple/glass",
+    "#createframed:magenta/glass",
+    "#createframed:pink/glass",
+    "#createframed:black/glass",
+    "#createframed:gray/glass",
+    "#createframed:light_gray/glass",
+    "#createframed:white/glass",
+    "#createframed:brown/glass",
+    "#createframed:tinted/glass"
+  ]
+}

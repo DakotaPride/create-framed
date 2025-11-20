@@ -1,0 +1,24 @@
+{
+  "replace": false,
+  "values": [
+    "createframed:red_package",
+    "createframed:orange_package",
+    "createframed:yellow_package",
+    "createframed:green_package",
+    "createframed:lime_package",
+    "createframed:blue_package",
+    "createframed:light_blue_package",
+    "createframed:cyan_package",
+    "createframed:purple_package",
+    "createframed:magenta_package",
+    "createframed:pink_package",
+    "createframed:black_package",
+    "createframed:gray_package",
+    "createframed:light_gray_package",
+    "createframed:white_package",
+    "createframed:brown_package",
+    "createframed:karpboard_package",
+    "createframed:fordalels_package",
+    "createframed:axolotl_lucy_package"
+  ]
+}

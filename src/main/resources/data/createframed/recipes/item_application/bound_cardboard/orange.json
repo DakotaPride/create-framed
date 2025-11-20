@@ -1,0 +1,16 @@
+{
+  "type": "create:item_application",
+  "ingredients": [
+    {
+      "item": "createframed:orange_cardboard_block"
+    },
+    {
+      "tag": "forge:string"
+    }
+  ],
+  "results": [
+    {
+      "item": "createframed:bound_orange_cardboard_block"
+    }
+  ]
+}

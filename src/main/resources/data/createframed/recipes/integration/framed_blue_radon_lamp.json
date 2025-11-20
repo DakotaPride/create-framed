@@ -1,14 +1,14 @@
 {
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "alexscaves:radon_lamp_blue"
+  },
+  "result": "createframed:framed_radon_lamp_blue",
+  "count": 1,
   "conditions": [
     {
       "type": "forge:mod_loaded",
       "modid": "alexscaves"
     }
-  ],
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "alexscaves:radon_lamp_blue"
-  },
-  "result": "createframed:framed_radon_lamp_blue"
+  ]
 }
