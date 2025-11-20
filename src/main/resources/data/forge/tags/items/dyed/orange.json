@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "#createframed:orange/glass",
+    "#createframed:orange/pane",
+    "createframed:orange_stained_framed_glass_door",
+    "createframed:orange_stained_framed_glass_trapdoor",
+    "createframed:orange_cardboard_block",
+    "createframed:bound_orange_cardboard_block",
+    "createframed:orange_cardboard_window",
+    "createframed:orange_cardboard_window_pane",
+    {
+      "require": false,
+      "id": "createframed:framed_radon_lamp_orange"
+    }
+  ]
+}

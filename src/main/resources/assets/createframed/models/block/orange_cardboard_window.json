@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "createframed:block/orange_cardboard_block_top",
+    "side": "createframed:block/orange_cardboard_window"
+  }
+}

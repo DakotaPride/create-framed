@@ -22,14 +22,12 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.DoorBlock;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
 import net.minecraft.world.phys.Vec3;
 
 import java.lang.ref.WeakReference;
-import java.util.Map;
 
 public class FramedSlidingDoorMovementBehaviour implements MovementBehaviour {
 
@@ -54,8 +52,11 @@ public class FramedSlidingDoorMovementBehaviour implements MovementBehaviour {
         if (!context.world.isClientSide())
             tickOpen(context, open);
 
-        Map<BlockPos, BlockEntity> tes = context.contraption.presentBlockEntities;
-        if (!(tes.get(context.localPos) instanceof FramedGlassSlidingDoorBlockEntity sdbe))
+        // Removed for 6.0.7+
+        // Map<BlockPos, BlockEntity> tes = context.contraption.presentBlockEntities;
+        // if (!(tes.get(context.localPos) instanceof FramedGlassSlidingDoorBlockEntity sdbe))
+
+        if (!(context.contraption.getBlockEntityClientSide(context.localPos) instanceof FramedGlassSlidingDoorBlockEntity sdbe))
             return;
         boolean wasSettled = sdbe.animation.settled();
         sdbe.animation.chase(open ? 1 : 0, .15f, LerpedFloat.Chaser.LINEAR);

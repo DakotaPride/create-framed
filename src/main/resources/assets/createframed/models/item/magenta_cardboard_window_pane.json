@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "createframed:block/magenta_cardboard_window"
+  }
+}

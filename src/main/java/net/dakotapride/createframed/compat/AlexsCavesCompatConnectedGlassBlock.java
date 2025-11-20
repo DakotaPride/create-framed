@@ -1,17 +1,17 @@
 package net.dakotapride.createframed.compat;
 
-import com.simibubi.create.content.decoration.palettes.ConnectedGlassBlock;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.fml.ModList;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class AlexsCavesCompatConnectedGlassBlock extends ConnectedGlassBlock {
+public class AlexsCavesCompatConnectedGlassBlock extends Block {
     public AlexsCavesCompatConnectedGlassBlock(Properties properties) {
         super(properties);
     }

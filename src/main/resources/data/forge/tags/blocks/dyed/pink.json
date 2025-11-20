@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "#createframed:pink/glass",
+    "#createframed:pink/pane",
+    "createframed:pink_stained_framed_glass_door",
+    "createframed:pink_stained_framed_glass_trapdoor",
+    "createframed:pink_cardboard_block",
+    "createframed:bound_pink_cardboard_block",
+    "createframed:pink_cardboard_window",
+    "createframed:pink_cardboard_window_pane",
+    {
+      "require": false,
+      "id": "createframed:framed_radon_lamp_pink"
+    }
+  ]
+}

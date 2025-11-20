@@ -1,0 +1,13 @@
+{
+  "type": "create:splashing",
+  "ingredients": [
+    {
+      "tag": "createframed:dyed_cardboard_blocks"
+    }
+  ],
+  "results": [
+    {
+      "item": "create:cardboard_block"
+    }
+  ]
+}

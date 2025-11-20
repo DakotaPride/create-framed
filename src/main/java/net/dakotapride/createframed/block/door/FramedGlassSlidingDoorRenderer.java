@@ -53,6 +53,7 @@ public class FramedGlassSlidingDoorRenderer extends SlidingDoorRenderer {
                 .add(Vec3.atLowerCornerOf(facing.getNormal())
                         .scale(value2 * 1 / 32f));
 
+        /*
         if (((SlidingDoorBlock) blockState.getBlock()).isFoldingDoor()) {
             Couple<PartialModel> partials =
                     AllPartialModels.FOLDING_DOORS.get(ForgeRegistries.BLOCKS.getKey(blockState.getBlock()));
@@ -85,6 +86,7 @@ public class FramedGlassSlidingDoorRenderer extends SlidingDoorRenderer {
 
             return;
         }
+        */
 
         for (DoubleBlockHalf half : DoubleBlockHalf.values()) {
             CachedBuffers.block(blockState.setValue(DoorBlock.OPEN, false)

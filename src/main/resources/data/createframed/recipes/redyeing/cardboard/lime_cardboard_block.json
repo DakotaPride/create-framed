@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "create:cardboard_block"
+    },
+    "X": {
+      "item": "minecraft:lime_dye"
+    }
+  },
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "result": {
+    "count": 8,
+    "item": "createframed:lime_cardboard_block"
+  },
+  "show_notification": true
+}

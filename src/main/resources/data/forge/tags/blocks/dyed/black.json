@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "#createframed:black/glass",
+    "#createframed:black/pane",
+    "createframed:black_stained_framed_glass_door",
+    "createframed:black_stained_framed_glass_trapdoor",
+    "createframed:black_cardboard_block",
+    "createframed:bound_black_cardboard_block",
+    "createframed:black_cardboard_window",
+    "createframed:black_cardboard_window_pane",
+    {
+      "require": false,
+      "id": "createframed:framed_radon_lamp_black"
+    }
+  ]
+}

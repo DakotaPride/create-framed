@@ -1,0 +1,13 @@
+{
+  "type": "create:splashing",
+  "ingredients": [
+    {
+      "tag": "createframed:horizontal_stained_framed_glass"
+    }
+  ],
+  "results": [
+    {
+      "item": "create:horizontal_framed_glass"
+    }
+  ]
+}

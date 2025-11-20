@@ -19,17 +19,17 @@ import org.jetbrains.annotations.NotNull;
 public class CreateFramedTabs {
     private static final DeferredRegister<CreativeModeTab> REGISTER =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, CreateFramedMod.ID);
-    
-    public static final RegistryObject<CreativeModeTab> CREATE_FRAMED = REGISTER.register("create_framed",
+
+    public static final RegistryObject<CreativeModeTab> CREATE_FRAMED = REGISTER.register("createframed",
             () -> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.createframed.create_framed"))
                     .withTabsBefore(CreativeModeTabs.SPAWN_EGGS)
                     .icon(CreateFramedBlocks.RED.getTiledGlassPane()::asStack)
                     .displayItems(new ItemsGenerator())
                     .build());
-    
+
     public static class ItemsGenerator implements CreativeModeTab.DisplayItemsGenerator {
-        
+
         @Override
         public void accept(CreativeModeTab.@NotNull ItemDisplayParameters p, CreativeModeTab.Output o) {
             // Alex's Caves
@@ -69,6 +69,18 @@ public class CreateFramedTabs {
             o.accept(CreateFramedBlocks.TINTED.getHorizontalTintedGlassPane());
             o.accept(CreateFramedBlocks.TINTED.getVerticalTintedGlass());
             o.accept(CreateFramedBlocks.TINTED.getVerticalTintedGlassPane());
+
+
+            for (CreateFramedBlocks blocks : CreateFramedBlocks.values())
+                if (blocks != CreateFramedBlocks.TINTED) {
+                    o.accept(blocks.getCardboardBlock());
+                    o.accept(blocks.getBoundCardboardBlock());
+                }
+
+            o.accept(MiscBlocks.KARPBOARD_BLOCK.asItem());
+            o.accept(MiscBlocks.SHINY_KARPBOARD_BLOCK.asItem());
+            for (CreateFramedPackageStyles.Items items : CreateFramedPackageStyles.Items.values())
+                o.accept(items.getPackageItem());
         }
     }
 
