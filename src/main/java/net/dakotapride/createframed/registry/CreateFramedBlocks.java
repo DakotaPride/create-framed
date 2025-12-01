@@ -109,8 +109,6 @@ public enum CreateFramedBlocks {
     public BlockEntry<CardboardBlock> cardboard_block;
     public BlockEntry<CardboardBlock> bound_cardboard_block;
 
-    public static final List<Supplier<Item>> FUEL_ITEMS = new ArrayList<>();
-
     CreateFramedBlocks(Supplier<CTSpriteShiftEntry> basic_ctshift,
                        Supplier<CTSpriteShiftEntry> vertical_ctshift,
                        Supplier<CTSpriteShiftEntry> horizontal_ctshift,
