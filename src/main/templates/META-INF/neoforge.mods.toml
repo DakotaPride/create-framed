@@ -89,7 +89,7 @@ file="META-INF/accesstransformer.cfg"
 [[dependencies.${mod_id}]]
     modId="create"
     mandatory=true
-    versionRange="[6.0.6,)"
+    versionRange="[6.0.9,)"
     ordering="NONE"
     side="BOTH"
 
