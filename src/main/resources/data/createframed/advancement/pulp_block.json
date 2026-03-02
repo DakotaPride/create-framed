@@ -7,6 +7,7 @@
       "translate": "advancement.createframed.pulp_block.title"
     },
     "description": {
+      "color": "#DBA213",
       "translate": "advancement.createframed.pulp_block.description"
     },
     "frame": "task",
