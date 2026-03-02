@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "createframed:red_cardboard_window",
+    "createframed:orange_cardboard_window",
+    "createframed:yellow_cardboard_window",
+    "createframed:green_cardboard_window",
+    "createframed:lime_cardboard_window",
+    "createframed:blue_cardboard_window",
+    "createframed:light_blue_cardboard_window",
+    "createframed:cyan_cardboard_window",
+    "createframed:purple_cardboard_window",
+    "createframed:magenta_cardboard_window",
+    "createframed:pink_cardboard_window",
+    "createframed:black_cardboard_window",
+    "createframed:gray_cardboard_window",
+    "createframed:light_gray_cardboard_window",
+    "createframed:white_cardboard_window",
+    "createframed:brown_cardboard_window"
+  ]
+}

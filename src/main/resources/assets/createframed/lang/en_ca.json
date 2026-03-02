@@ -73,6 +73,8 @@
   "block.createframed.karpboard_block": "Block of Karpboard",
   "block.createframed.shiny_karpboard_block": "Shiny Block of Karpboard",
 
+  "block.createframed.pulp_block": "Block of Pulp",
+
   "block.createframed.copper_window": "Copper Window",
   "block.createframed.copper_window_pane": "Copper Window Pane",
   "block.createframed.zinc_window": "Zinc Window",

@@ -1,6 +1,10 @@
 {
   "replace": false,
   "values": [
+    "#createframed:dyed_cardboard_blocks",
+    "#createframed:dyed_bound_cardboard_blocks",
+    "#createframed:dyed_cardboard_windows",
+    "#createframed:dyed_cardboard_window_panes",
     "createframed:cardboard_window",
     "createframed:cardboard_window_pane"
   ]

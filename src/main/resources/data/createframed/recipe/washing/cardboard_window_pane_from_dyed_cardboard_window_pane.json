@@ -1,0 +1,15 @@
+{
+  "type": "create:splashing",
+  "ingredients": [
+    {
+      "tag": "createframed:dyed_cardboard_window_panes"
+    }
+  ],
+  "results": [
+    {
+      "item": {
+        "id": "createframed:cardboard_window_pane"
+      }
+    }
+  ]
+}

@@ -1,26 +1,28 @@
 {
   "display": {
     "icon": {
-      "id": "createframed:purple_cardboard_block"
+      "id": "createframed:pulp_block"
     },
     "title": {
-      "translate": "advancement.createframed.dyed_cardboard_block.title"
+      "translate": "advancement.createframed.pulp_block.title"
     },
     "description": {
-      "translate": "advancement.createframed.dyed_cardboard_block.description"
+      "translate": "advancement.createframed.pulp_block.description"
     },
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": true
   },
-  "parent": "createframed:pulp_block",
+  "parent": "create:cardboard",
   "criteria": {
-    "has_dyed_cardboard_block": {
+    "has_pulp_block": {
       "conditions": {
         "items": [
           {
-            "items": "#createframed:dyed_cardboard_blocks"
+            "items": [
+              "createframed:pulp_block"
+            ]
           }
         ]
       },
@@ -29,7 +31,7 @@
   },
   "requirements": [
     [
-      "has_dyed_cardboard_block"
+      "has_pulp_block"
     ]
   ]
 }
