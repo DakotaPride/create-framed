@@ -5,6 +5,8 @@
   "advancement.createframed.dyed_cardboard_block.description": "Produce or obtain a dyed Block of Cardboard\n§7(Hidden Advancement)",
   "advancement.createframed.karpboard.title": "Splish Splash",
   "advancement.createframed.karpboard.description": "Produce or obtain a Block of Karpboard\n§7(Hidden Advancement)",
+  "advancement.createframed.pulp_block.title": "Forget to filter?",
+  "advancement.createframed.pulp_block.description": "Produce (maybe on accident) a Block of Pulp\n§7(Hidden Advancement)",
 
   "block.createframed.red_cardboard_block": "Block of Red Cardboard",
   "block.createframed.orange_cardboard_block": "Block of Orange Cardboard",
@@ -72,6 +74,8 @@
   "block.createframed.brown_cardboard_window_pane": "Brown Cardboard Peephole Pane",
   "block.createframed.karpboard_block": "Block of Karpboard",
   "block.createframed.shiny_karpboard_block": "Shiny Block of Karpboard",
+
+  "block.createframed.pulp_block": "Block of Pulp",
 
   "block.createframed.copper_window": "Copper Window",
   "block.createframed.copper_window_pane": "Copper Window Pane",

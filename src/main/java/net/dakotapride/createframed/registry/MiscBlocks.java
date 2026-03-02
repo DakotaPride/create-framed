@@ -3,6 +3,7 @@ package net.dakotapride.createframed.registry;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import net.dakotapride.createframed.block.KarpboardBlock;
 import net.dakotapride.createframed.item.KarpboardBlockItem;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.material.MapColor;
@@ -29,6 +30,10 @@ public class MiscBlocks {
             .item((b, p) -> new KarpboardBlockItem(b, true, p))
             .build()
             .register();
+    public static BlockEntry<Block> PULP_BLOCK = REGISTRATE.block("pulp_block", Block::new)
+            .initialProperties(() -> Blocks.MOSS_BLOCK)
+            .properties(p -> p.mapColor(MapColor.COLOR_LIGHT_GRAY))
+            .simpleItem().register();
 
     public static void register() {}
 }

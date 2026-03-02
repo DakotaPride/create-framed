@@ -11,10 +11,10 @@
     },
     "frame": "task",
     "show_toast": true,
-    "announce_to_chat": false,
+    "announce_to_chat": true,
     "hidden": true
   },
-  "parent": "create:cardboard",
+  "parent": "createframed:dyed_cardboard",
   "criteria": {
     "has_karpboard_block": {
       "conditions": {
