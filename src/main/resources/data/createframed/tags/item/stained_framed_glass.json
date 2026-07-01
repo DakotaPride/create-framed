@@ -16,6 +16,23 @@
     "createframed:gray_stained_framed_glass",
     "createframed:light_gray_stained_framed_glass",
     "createframed:white_stained_framed_glass",
-    "createframed:brown_stained_framed_glass"
+    "createframed:brown_stained_framed_glass",
+
+    "createframed:maroon_stained_framed_glass",
+    "createframed:rose_stained_framed_glass",
+    "createframed:coral_stained_framed_glass",
+    "createframed:indigo_stained_framed_glass",
+    "createframed:navy_stained_framed_glass",
+    "createframed:slate_stained_framed_glass",
+    "createframed:olive_stained_framed_glass",
+    "createframed:amber_stained_framed_glass",
+    "createframed:beige_stained_framed_glass",
+    "createframed:teal_stained_framed_glass",
+    "createframed:mint_stained_framed_glass",
+    "createframed:aqua_stained_framed_glass",
+    "createframed:verdant_stained_framed_glass",
+    "createframed:forest_stained_framed_glass",
+    "createframed:ginger_stained_framed_glass",
+    "createframed:tan_stained_framed_glass"
   ]
 }

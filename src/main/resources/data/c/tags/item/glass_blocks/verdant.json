@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "dye_depot:verdant_stained_glass",
+      "required": false
+    },
+    "#createframed:verdant/glass"
+  ]
+}

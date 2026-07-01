@@ -14,6 +14,7 @@ import net.dakotapride.createframed.block.*;
 import net.dakotapride.createframed.block.door.FramedGlassSlidingDoorBlock;
 import net.dakotapride.createframed.block.door.TintedFramedGlassSlidingDoorBlock;
 import net.dakotapride.createframed.compat.AlexsCavesModule;
+import net.dakotapride.createframed.compat.DyeDepotModule;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.*;
@@ -253,5 +254,7 @@ public enum CreateFramedBlocks {
 
         // Alex's Caves
         AlexsCavesModule.register();
+        // Dye Depot
+        DyeDepotModule.register();
     }
 }

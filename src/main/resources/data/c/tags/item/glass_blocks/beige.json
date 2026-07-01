@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "dye_depot:beige_stained_glass",
+      "required": false
+    },
+    "#createframed:beige/glass"
+  ]
+}

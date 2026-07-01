@@ -1,13 +1,12 @@
 package net.dakotapride.createframed.compat;
 
-import com.simibubi.create.content.decoration.palettes.ConnectedGlassBlock;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.block.Block;
-import net.neoforged.fml.ModList;
+import net.neoforged.fml.loading.LoadingModList;
 
 import java.util.List;
 
@@ -19,7 +18,7 @@ public class AlexsCavesCompatConnectedGlassBlock extends Block {
 
     @Override
     public void appendHoverText(ItemStack pStack, Item.TooltipContext ctx, List<Component> pTooltip, TooltipFlag pFlag) {
-        if (!ModList.get().isLoaded("alexscaves"))
+        if (LoadingModList.get().getModFileById("alexscaves") == null)
             pTooltip.add(Component.translatable("text.createframed.mod_missing.alexs_caves").withStyle(ChatFormatting.RED));
     }
 }

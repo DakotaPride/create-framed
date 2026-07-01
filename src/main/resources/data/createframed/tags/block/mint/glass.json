@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "createframed:mint_stained_framed_glass",
+    "createframed:horizontal_mint_stained_framed_glass",
+    "createframed:vertical_mint_stained_framed_glass",
+    "createframed:mint_stained_tiled_glass"
+  ]
+}

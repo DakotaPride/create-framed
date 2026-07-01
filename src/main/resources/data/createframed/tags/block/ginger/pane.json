@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "createframed:ginger_stained_framed_glass_pane",
+    "createframed:horizontal_ginger_stained_framed_glass_pane",
+    "createframed:vertical_ginger_stained_framed_glass_pane",
+    "createframed:ginger_stained_tiled_glass_pane"
+  ]
+}

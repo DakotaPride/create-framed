@@ -2,13 +2,14 @@ package net.dakotapride.createframed.registry;
 
 import net.dakotapride.createframed.CreateFramedMod;
 import net.dakotapride.createframed.compat.AlexsCavesModule;
+import net.dakotapride.createframed.compat.DyeDepotModule;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.fml.ModList;
 import net.neoforged.fml.loading.FMLLoader;
+import net.neoforged.fml.loading.LoadingModList;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.jetbrains.annotations.ApiStatus;
@@ -33,9 +34,30 @@ public class CreateFramedTabs {
         @Override
         public void accept(CreativeModeTab.@NotNull ItemDisplayParameters p, CreativeModeTab.@NotNull Output o) {
             // Alex's Caves
-            if (ModList.get().isLoaded("alexscaves") || !FMLLoader.isProduction()) {
+            if (LoadingModList.get().getModFileById("alexscaves") != null || !FMLLoader.isProduction()) {
                 for (AlexsCavesModule module : AlexsCavesModule.values()) {
                     o.accept(module.getGlassBlock());
+                }
+            }
+
+            // Dye Depot
+            if (LoadingModList.get().getModFileById("dye_depot") != null || !FMLLoader.isProduction()) {
+                for (DyeDepotModule module : DyeDepotModule.values()) {
+                    o.accept(module.getGlassDoorBlock());
+                    o.accept(module.getGlassTrapdoorBlock());
+                    o.accept(module.getTiledGlassBlock());
+                    o.accept(module.getTiledGlassPane());
+                    o.accept(module.getGlassBlock());
+                    o.accept(module.getGlassPane());
+                    o.accept(module.getHorizontalGlassBlock());
+                    o.accept(module.getHorizontalGlassPane());
+                    o.accept(module.getVerticalGlassBlock());
+                    o.accept(module.getVerticalGlassPane());
+
+                    o.accept(module.getCardboardBlock());
+                    o.accept(module.getBoundCardboardBlock());
+                    o.accept(module.getWindowBlock());
+                    o.accept(module.getWindowPaneBlock());
                 }
             }
 
@@ -81,7 +103,8 @@ public class CreateFramedTabs {
             o.accept(MiscBlocks.PULP_BLOCK.asItem());
 
             for (CreateFramedPackageStyles.Items items : CreateFramedPackageStyles.Items.values())
-                o.accept(items.getPackageItem());
+                if (items.getPackageItem() != null)
+                    o.accept(items.getPackageItem());
         }
     }
 

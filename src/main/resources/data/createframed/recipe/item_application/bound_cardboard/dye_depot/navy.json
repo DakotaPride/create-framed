@@ -1,0 +1,18 @@
+{
+  "type": "create:item_application",
+  "ingredients": [
+    {
+      "item": "createframed:navy_cardboard_block"
+    },
+    {
+      "tag": "c:strings"
+    }
+  ],
+  "results": [
+    {
+      "item": {
+        "id": "createframed:bound_navy_cardboard_block"
+      }
+    }
+  ]
+}

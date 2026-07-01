@@ -1,0 +1,15 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "dye_depot"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "c:glass_blocks/mint"
+  },
+  "result": {
+    "id": "createframed:horizontal_mint_stained_framed_glass"
+  }
+}

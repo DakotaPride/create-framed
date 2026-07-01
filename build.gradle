@@ -42,6 +42,13 @@ repositories {
         url = "https://modmaven.dev"
     }
     maven { url "https://maven.shedaniel.me/" }
+
+    maven {
+        url = uri("https://registry.somethingcatchy.net/repository/maven-releases/")
+        content {
+            includeGroup("com.ninni.dye_depot")
+        }
+    }
 }
 
 //base {
@@ -147,6 +154,9 @@ dependencies {
 
     compileOnly ("top.theillusivec4.curios:curios-neoforge:${curios_version}+${curios_minecraft_version}")
     runtimeOnly ("top.theillusivec4.curios:curios-neoforge:${curios_version}+${curios_minecraft_version}")
+
+    // Dye Depot
+    implementation("com.ninni.dye_depot:dye_depot-neoforge:${minecraft_version}-${dd_version}")
 
     // For more info...
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html

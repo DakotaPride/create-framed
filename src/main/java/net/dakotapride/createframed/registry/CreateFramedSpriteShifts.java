@@ -104,6 +104,75 @@ public class CreateFramedSpriteShifts {
             WHITE_FRAMED_RADON_LAMP = omni("alexscaves/framed_radon_lamp_white"),
             BROWN_FRAMED_RADON_LAMP = omni("alexscaves/framed_radon_lamp_brown");
 
+    public static final CTSpriteShiftEntry
+            MAROON_STAINED_FRAMED_GLASS = omni("maroon_stained_framed_glass"),
+            ROSE_STAINED_FRAMED_GLASS = omni("rose_stained_framed_glass"),
+            CORAL_STAINED_FRAMED_GLASS = omni("coral_stained_framed_glass"),
+            INDIGO_STAINED_FRAMED_GLASS = omni("indigo_stained_framed_glass"),
+            NAVY_STAINED_FRAMED_GLASS = omni("navy_stained_framed_glass"),
+            SLATE_STAINED_FRAMED_GLASS = omni("slate_stained_framed_glass"),
+            OLIVE_STAINED_FRAMED_GLASS = omni("olive_stained_framed_glass"),
+            AMBER_STAINED_FRAMED_GLASS = omni("amber_stained_framed_glass"),
+            BEIGE_STAINED_FRAMED_GLASS = omni("beige_stained_framed_glass"),
+            TEAL_STAINED_FRAMED_GLASS = omni("teal_stained_framed_glass"),
+            MINT_STAINED_FRAMED_GLASS = omni("mint_stained_framed_glass"),
+            AQUA_STAINED_FRAMED_GLASS = omni("aqua_stained_framed_glass"),
+            VERDANT_STAINED_FRAMED_GLASS = omni("verdant_stained_framed_glass"),
+            FOREST_STAINED_FRAMED_GLASS = omni("forest_stained_framed_glass"),
+            GINGER_STAINED_FRAMED_GLASS = omni("ginger_stained_framed_glass"),
+            TAN_STAINED_FRAMED_GLASS = omni("tan_stained_framed_glass");
+    public static final CTSpriteShiftEntry
+            HORIZONTAL_MAROON_STAINED_FRAMED_GLASS = dyeDepotHorizontal("maroon_stained_framed_glass"),
+            HORIZONTAL_ROSE_STAINED_FRAMED_GLASS = dyeDepotHorizontal("rose_stained_framed_glass"),
+            HORIZONTAL_CORAL_STAINED_FRAMED_GLASS = dyeDepotHorizontal("coral_stained_framed_glass"),
+            HORIZONTAL_INDIGO_STAINED_FRAMED_GLASS = dyeDepotHorizontal("indigo_stained_framed_glass"),
+            HORIZONTAL_NAVY_STAINED_FRAMED_GLASS = dyeDepotHorizontal("navy_stained_framed_glass"),
+            HORIZONTAL_SLATE_STAINED_FRAMED_GLASS = dyeDepotHorizontal("slate_stained_framed_glass"),
+            HORIZONTAL_OLIVE_STAINED_FRAMED_GLASS = dyeDepotHorizontal("olive_stained_framed_glass"),
+            HORIZONTAL_AMBER_STAINED_FRAMED_GLASS = dyeDepotHorizontal("amber_stained_framed_glass"),
+            HORIZONTAL_BEIGE_STAINED_FRAMED_GLASS = dyeDepotHorizontal("beige_stained_framed_glass"),
+            HORIZONTAL_TEAL_STAINED_FRAMED_GLASS = dyeDepotHorizontal("teal_stained_framed_glass"),
+            HORIZONTAL_MINT_STAINED_FRAMED_GLASS = dyeDepotHorizontal("mint_stained_framed_glass"),
+            HORIZONTAL_AQUA_STAINED_FRAMED_GLASS = dyeDepotHorizontal("aqua_stained_framed_glass"),
+            HORIZONTAL_VERDANT_STAINED_FRAMED_GLASS = dyeDepotHorizontal("verdant_stained_framed_glass"),
+            HORIZONTAL_FOREST_STAINED_FRAMED_GLASS = dyeDepotHorizontal("forest_stained_framed_glass"),
+            HORIZONTAL_GINGER_STAINED_FRAMED_GLASS = dyeDepotHorizontal("ginger_stained_framed_glass"),
+            HORIZONTAL_TAN_STAINED_FRAMED_GLASS = dyeDepotHorizontal("tan_stained_framed_glass");
+    public static final CTSpriteShiftEntry
+            VERTICAL_MAROON_STAINED_FRAMED_GLASS = dyeDepotVertical("maroon_stained_framed_glass"),
+            VERTICAL_ROSE_STAINED_FRAMED_GLASS = dyeDepotVertical("rose_stained_framed_glass"),
+            VERTICAL_CORAL_STAINED_FRAMED_GLASS = dyeDepotVertical("coral_stained_framed_glass"),
+            VERTICAL_INDIGO_STAINED_FRAMED_GLASS = dyeDepotVertical("indigo_stained_framed_glass"),
+            VERTICAL_NAVY_STAINED_FRAMED_GLASS = dyeDepotVertical("navy_stained_framed_glass"),
+            VERTICAL_SLATE_STAINED_FRAMED_GLASS = dyeDepotVertical("slate_stained_framed_glass"),
+            VERTICAL_OLIVE_STAINED_FRAMED_GLASS = dyeDepotVertical("olive_stained_framed_glass"),
+            VERTICAL_AMBER_STAINED_FRAMED_GLASS = dyeDepotVertical("amber_stained_framed_glass"),
+            VERTICAL_BEIGE_STAINED_FRAMED_GLASS = dyeDepotVertical("beige_stained_framed_glass"),
+            VERTICAL_TEAL_STAINED_FRAMED_GLASS = dyeDepotVertical("teal_stained_framed_glass"),
+            VERTICAL_MINT_STAINED_FRAMED_GLASS = dyeDepotVertical("mint_stained_framed_glass"),
+            VERTICAL_AQUA_STAINED_FRAMED_GLASS = dyeDepotVertical("aqua_stained_framed_glass"),
+            VERTICAL_VERDANT_STAINED_FRAMED_GLASS = dyeDepotVertical("verdant_stained_framed_glass"),
+            VERTICAL_FOREST_STAINED_FRAMED_GLASS = dyeDepotVertical("forest_stained_framed_glass"),
+            VERTICAL_GINGER_STAINED_FRAMED_GLASS = dyeDepotVertical("ginger_stained_framed_glass"),
+            VERTICAL_TAN_STAINED_FRAMED_GLASS = dyeDepotVertical("tan_stained_framed_glass");
+    public static final CTSpriteShiftEntry
+            MAROON_CARDBOARD_WINDOW = getCT(AllCTTypes.HORIZONTAL_KRYPPERS, "maroon_cardboard_window"),
+            ROSE_CARDBOARD_WINDOW = getCT(AllCTTypes.HORIZONTAL_KRYPPERS, "rose_cardboard_window"),
+            CORAL_CARDBOARD_WINDOW = getCT(AllCTTypes.HORIZONTAL_KRYPPERS, "coral_cardboard_window"),
+            INDIGO_CARDBOARD_WINDOW = getCT(AllCTTypes.HORIZONTAL_KRYPPERS, "indigo_cardboard_window"),
+            NAVY_CARDBOARD_WINDOW = getCT(AllCTTypes.HORIZONTAL_KRYPPERS, "navy_cardboard_window"),
+            SLATE_CARDBOARD_WINDOW = getCT(AllCTTypes.HORIZONTAL_KRYPPERS, "slate_cardboard_window"),
+            OLIVE_CARDBOARD_WINDOW = getCT(AllCTTypes.HORIZONTAL_KRYPPERS, "olive_cardboard_window"),
+            AMBER_CARDBOARD_WINDOW = getCT(AllCTTypes.HORIZONTAL_KRYPPERS, "amber_cardboard_window"),
+            BEIGE_CARDBOARD_WINDOW = getCT(AllCTTypes.HORIZONTAL_KRYPPERS, "beige_cardboard_window"),
+            TEAL_CARDBOARD_WINDOW = getCT(AllCTTypes.HORIZONTAL_KRYPPERS, "teal_cardboard_window"),
+            MINT_CARDBOARD_WINDOW = getCT(AllCTTypes.HORIZONTAL_KRYPPERS, "mint_cardboard_window"),
+            AQUA_CARDBOARD_WINDOW = getCT(AllCTTypes.HORIZONTAL_KRYPPERS, "aqua_cardboard_window"),
+            VERDANT_CARDBOARD_WINDOW = getCT(AllCTTypes.HORIZONTAL_KRYPPERS, "verdant_cardboard_window"),
+            FOREST_CARDBOARD_WINDOW = getCT(AllCTTypes.HORIZONTAL_KRYPPERS, "forest_cardboard_window"),
+            GINGER_CARDBOARD_WINDOW = getCT(AllCTTypes.HORIZONTAL_KRYPPERS, "ginger_cardboard_window"),
+            TAN_CARDBOARD_WINDOW = getCT(AllCTTypes.HORIZONTAL_KRYPPERS, "tan_cardboard_window");
+
     public static CTSpriteShiftEntry omni(String name) {
         return getCT(AllCTTypes.OMNIDIRECTIONAL, name);
     }
@@ -114,6 +183,14 @@ public class CreateFramedSpriteShifts {
 
     public static CTSpriteShiftEntry vertical(String name) {
         return getCT(AllCTTypes.VERTICAL, name, "vertical_" + name);
+    }
+
+    public static CTSpriteShiftEntry dyeDepotHorizontal(String name) {
+        return getCT(AllCTTypes.HORIZONTAL_KRYPPERS, name, "" + "horizontal_" + name);
+    }
+
+    public static CTSpriteShiftEntry dyeDepotVertical(String name) {
+        return getCT(AllCTTypes.VERTICAL, name, "" + "vertical_" + name);
     }
 
     public static CTSpriteShiftEntry getCT(CTType type, String blockTextureName, String connectedTextureName) {

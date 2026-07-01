@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "createframed:block/slate_cardboard_window"
+    }
+  }
+}

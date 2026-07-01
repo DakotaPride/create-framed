@@ -29,7 +29,7 @@ import org.slf4j.Logger;
 public class CreateFramedMod {
     // Directly reference a slf4j logger
     public static final String ID = "createframed";
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
     //public static final CreateRegistrate REGISTRATE = CreateRegistrate.create(ID);
     public static final CreateRegistrate REGISTRATE = CreateRegistrate.create(ID)
             .defaultCreativeTab((ResourceKey<CreativeModeTab>) null);

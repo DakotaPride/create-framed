@@ -1,0 +1,15 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "dye_depot"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "c:glass_blocks/ginger"
+  },
+  "result": {
+    "id": "createframed:horizontal_ginger_stained_framed_glass"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "#createframed:verdant/glass",
+    "#createframed:verdant/pane",
+    "createframed:verdant_stained_framed_glass_door",
+    "createframed:verdant_stained_framed_glass_trapdoor",
+    "createframed:verdant_cardboard_block",
+    "createframed:bound_verdant_cardboard_block",
+    "createframed:verdant_cardboard_window",
+    "createframed:verdant_cardboard_window_pane"
+  ]
+}

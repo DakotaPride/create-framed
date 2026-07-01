@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "createframed:framed_radon_lamp_red",
+    "createframed:framed_radon_lamp_orange",
+    "createframed:framed_radon_lamp_yellow",
+    "createframed:framed_radon_lamp_green",
+    "createframed:framed_radon_lamp_lime",
+    "createframed:framed_radon_lamp_blue",
+    "createframed:framed_radon_lamp_light_blue",
+    "createframed:framed_radon_lamp_cyan",
+    "createframed:framed_radon_lamp_purple",
+    "createframed:framed_radon_lamp_magenta",
+    "createframed:framed_radon_lamp_pink",
+    "createframed:framed_radon_lamp_black",
+    "createframed:framed_radon_lamp_gray",
+    "createframed:framed_radon_lamp_light_gray",
+    "createframed:framed_radon_lamp_white",
+    "createframed:framed_radon_lamp_brown"
+  ]
+}

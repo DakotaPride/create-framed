@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "#createframed:beige/glass",
+    "#createframed:beige/pane",
+    "createframed:beige_stained_framed_glass_door",
+    "createframed:beige_stained_framed_glass_trapdoor",
+    "createframed:beige_cardboard_block",
+    "createframed:bound_beige_cardboard_block",
+    "createframed:beige_cardboard_window",
+    "createframed:beige_cardboard_window_pane"
+  ]
+}

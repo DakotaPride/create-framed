@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "#createframed:olive/glass",
+    "#createframed:olive/pane",
+    "createframed:olive_stained_framed_glass_door",
+    "createframed:olive_stained_framed_glass_trapdoor",
+    "createframed:olive_cardboard_block",
+    "createframed:bound_olive_cardboard_block",
+    "createframed:olive_cardboard_window",
+    "createframed:olive_cardboard_window_pane"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "dye_depot"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "stained_framed_glass",
+  "key": {
+    "#": {
+      "item": "create:framed_glass"
+    },
+    "X": {
+      "item": "dye_depot:maroon_dye"
+    }
+  },
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "result": {
+    "count": 8,
+    "id": "createframed:maroon_stained_framed_glass"
+  },
+  "show_notification": true
+}

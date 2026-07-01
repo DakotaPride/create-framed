@@ -1,0 +1,15 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "dye_depot"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "c:glass_blocks/indigo"
+  },
+  "result": {
+    "id": "createframed:horizontal_indigo_stained_framed_glass"
+  }
+}

@@ -16,6 +16,23 @@
     "createframed:gray_cardboard_window",
     "createframed:light_gray_cardboard_window",
     "createframed:white_cardboard_window",
-    "createframed:brown_cardboard_window"
+    "createframed:brown_cardboard_window",
+
+    "createframed:maroon_cardboard_window",
+    "createframed:rose_cardboard_window",
+    "createframed:coral_cardboard_window",
+    "createframed:indigo_cardboard_window",
+    "createframed:navy_cardboard_window",
+    "createframed:slate_cardboard_window",
+    "createframed:olive_cardboard_window",
+    "createframed:amber_cardboard_window",
+    "createframed:beige_cardboard_window",
+    "createframed:teal_cardboard_window",
+    "createframed:mint_cardboard_window",
+    "createframed:aqua_cardboard_window",
+    "createframed:verdant_cardboard_window",
+    "createframed:forest_cardboard_window",
+    "createframed:ginger_cardboard_window",
+    "createframed:tan_cardboard_window"
   ]
 }

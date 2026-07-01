@@ -7,7 +7,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class TintedFramedGlassSlidingDoorBlock extends FramedGlassSlidingDoorBlock {
     public TintedFramedGlassSlidingDoorBlock(Properties properties) {
-        super(properties);
+        super(false, properties);
     }
 
     @Override

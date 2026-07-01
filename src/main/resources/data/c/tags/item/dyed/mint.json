@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "#createframed:mint/glass",
+    "#createframed:mint/pane",
+    "createframed:mint_stained_framed_glass_door",
+    "createframed:mint_stained_framed_glass_trapdoor",
+    "createframed:mint_cardboard_block",
+    "createframed:bound_mint_cardboard_block",
+    "createframed:mint_cardboard_window",
+    "createframed:mint_cardboard_window_pane"
+  ]
+}

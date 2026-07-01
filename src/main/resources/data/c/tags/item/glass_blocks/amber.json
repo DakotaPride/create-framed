@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "dye_depot:amber_stained_glass",
+      "required": false
+    },
+    "#createframed:amber/glass"
+  ]
+}

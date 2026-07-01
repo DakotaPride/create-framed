@@ -17,6 +17,28 @@
     "#createframed:light_gray/pane",
     "#createframed:white/pane",
     "#createframed:brown/pane",
-    "#createframed:tinted/pane"
+    "#createframed:tinted/pane",
+    "createframed:andesite_alloy_window_pane",
+    "createframed:brass_window_pane",
+    "createframed:copper_window_pane",
+    "createframed:rose_quartz_window_pane",
+    "createframed:zinc_window_pane",
+
+    "#createframed:maroon/pane",
+    "#createframed:rose/pane",
+    "#createframed:coral/pane",
+    "#createframed:indigo/pane",
+    "#createframed:navy/pane",
+    "#createframed:slate/pane",
+    "#createframed:olive/pane",
+    "#createframed:amber/pane",
+    "#createframed:beige/pane",
+    "#createframed:teal/pane",
+    "#createframed:mint/pane",
+    "#createframed:aqua/pane",
+    "#createframed:verdant/pane",
+    "#createframed:forest/pane",
+    "#createframed:ginger/pane",
+    "#createframed:tan/pane"
   ]
 }

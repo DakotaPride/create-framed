@@ -1,0 +1,15 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "dye_depot"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "c:glass_blocks/coral"
+  },
+  "result": {
+    "id": "createframed:coral_stained_tiled_glass"
+  }
+}

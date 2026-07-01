@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "createframed:beige_stained_framed_glass",
+    "createframed:horizontal_beige_stained_framed_glass",
+    "createframed:vertical_beige_stained_framed_glass",
+    "createframed:beige_stained_tiled_glass"
+  ]
+}

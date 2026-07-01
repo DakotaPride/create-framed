@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "createframed:block/maroon_cardboard_block_top",
+    "side": "createframed:block/maroon_cardboard_window"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "#createframed:forest/glass",
+    "#createframed:forest/pane",
+    "createframed:forest_stained_framed_glass_door",
+    "createframed:forest_stained_framed_glass_trapdoor",
+    "createframed:forest_cardboard_block",
+    "createframed:bound_forest_cardboard_block",
+    "createframed:forest_cardboard_window",
+    "createframed:forest_cardboard_window_pane"
+  ]
+}

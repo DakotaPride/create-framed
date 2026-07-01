@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "createframed:block/forest_cardboard_block_top",
+    "side": "createframed:block/forest_cardboard_window"
+  }
+}

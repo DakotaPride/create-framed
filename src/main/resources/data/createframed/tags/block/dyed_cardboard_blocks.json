@@ -16,6 +16,23 @@
     "createframed:gray_cardboard_block",
     "createframed:light_gray_cardboard_block",
     "createframed:white_cardboard_block",
-    "createframed:brown_cardboard_block"
+    "createframed:brown_cardboard_block",
+
+    "createframed:maroon_cardboard_block",
+    "createframed:rose_cardboard_block",
+    "createframed:coral_cardboard_block",
+    "createframed:indigo_cardboard_block",
+    "createframed:navy_cardboard_block",
+    "createframed:slate_cardboard_block",
+    "createframed:olive_cardboard_block",
+    "createframed:amber_cardboard_block",
+    "createframed:beige_cardboard_block",
+    "createframed:teal_cardboard_block",
+    "createframed:mint_cardboard_block",
+    "createframed:aqua_cardboard_block",
+    "createframed:verdant_cardboard_block",
+    "createframed:forest_cardboard_block",
+    "createframed:ginger_cardboard_block",
+    "createframed:tan_cardboard_block"
   ]
 }

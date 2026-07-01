@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "#createframed:amber/glass",
+    "#createframed:amber/pane",
+    "createframed:amber_stained_framed_glass_door",
+    "createframed:amber_stained_framed_glass_trapdoor",
+    "createframed:amber_cardboard_block",
+    "createframed:bound_amber_cardboard_block",
+    "createframed:amber_cardboard_window",
+    "createframed:amber_cardboard_window_pane"
+  ]
+}

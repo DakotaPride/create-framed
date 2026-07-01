@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "#createframed:maroon/glass",
+    "#createframed:maroon/pane",
+    "createframed:maroon_stained_framed_glass_door",
+    "createframed:maroon_stained_framed_glass_trapdoor",
+    "createframed:maroon_cardboard_block",
+    "createframed:bound_maroon_cardboard_block",
+    "createframed:maroon_cardboard_window",
+    "createframed:maroon_cardboard_window_pane"
+  ]
+}

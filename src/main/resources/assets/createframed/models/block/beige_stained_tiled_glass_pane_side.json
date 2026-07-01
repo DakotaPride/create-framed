@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_glass_pane_side",
+  "textures": {
+    "edge": "createframed:block/beige_stained_glass_pane_top",
+    "pane": "createframed:block/beige_stained_tiled_glass"
+  }
+}

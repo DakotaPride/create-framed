@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "#createframed:rose/glass",
+    "#createframed:rose/pane",
+    "createframed:rose_stained_framed_glass_door",
+    "createframed:rose_stained_framed_glass_trapdoor",
+    "createframed:rose_cardboard_block",
+    "createframed:bound_rose_cardboard_block",
+    "createframed:rose_cardboard_window",
+    "createframed:rose_cardboard_window_pane"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "dye_depot:forest_stained_glass",
+      "required": false
+    },
+    "#createframed:forest/glass"
+  ]
+}

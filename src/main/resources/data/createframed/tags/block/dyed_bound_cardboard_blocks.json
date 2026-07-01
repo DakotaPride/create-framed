@@ -16,6 +16,23 @@
     "createframed:bound_gray_cardboard_block",
     "createframed:bound_light_gray_cardboard_block",
     "createframed:bound_white_cardboard_block",
-    "createframed:bound_brown_cardboard_block"
+    "createframed:bound_brown_cardboard_block",
+
+    "createframed:bound_maroon_cardboard_block",
+    "createframed:bound_rose_cardboard_block",
+    "createframed:bound_coral_cardboard_block",
+    "createframed:bound_indigo_cardboard_block",
+    "createframed:bound_navy_cardboard_block",
+    "createframed:bound_slate_cardboard_block",
+    "createframed:bound_olive_cardboard_block",
+    "createframed:bound_amber_cardboard_block",
+    "createframed:bound_beige_cardboard_block",
+    "createframed:bound_teal_cardboard_block",
+    "createframed:bound_mint_cardboard_block",
+    "createframed:bound_aqua_cardboard_block",
+    "createframed:bound_verdant_cardboard_block",
+    "createframed:bound_forest_cardboard_block",
+    "createframed:bound_ginger_cardboard_block",
+    "createframed:bound_tan_cardboard_block"
   ]
 }

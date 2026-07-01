@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "dye_depot:navy_stained_glass",
+      "required": false
+    },
+    "#createframed:navy/glass"
+  ]
+}

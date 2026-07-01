@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "#createframed:aqua/glass",
+    "#createframed:aqua/pane",
+    "createframed:aqua_stained_framed_glass_door",
+    "createframed:aqua_stained_framed_glass_trapdoor",
+    "createframed:aqua_cardboard_block",
+    "createframed:bound_aqua_cardboard_block",
+    "createframed:aqua_cardboard_window",
+    "createframed:aqua_cardboard_window_pane"
+  ]
+}

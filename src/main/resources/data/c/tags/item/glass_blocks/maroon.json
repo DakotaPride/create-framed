@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "dye_depot:maroon_stained_glass",
+      "required": false
+    },
+    "#createframed:maroon/glass"
+  ]
+}

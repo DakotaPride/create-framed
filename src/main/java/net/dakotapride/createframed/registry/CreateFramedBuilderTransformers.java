@@ -2,7 +2,6 @@ package net.dakotapride.createframed.registry;
 
 import com.simibubi.create.AllBlocks;
 import com.simibubi.create.content.decoration.TrainTrapdoorBlock;
-import com.simibubi.create.content.decoration.palettes.ConnectedGlassBlock;
 import com.simibubi.create.content.decoration.palettes.ConnectedGlassPaneBlock;
 import com.simibubi.create.content.decoration.palettes.GlassPaneBlock;
 import com.simibubi.create.content.decoration.palettes.WindowBlock;
@@ -22,6 +21,10 @@ import net.dakotapride.createframed.block.behaviour.FramedGlassTrapdoorCTBehavio
 import net.dakotapride.createframed.block.behaviour.FramedSlidingDoorMovementBehaviour;
 import net.dakotapride.createframed.block.door.FramedGlassSlidingDoorBlock;
 import net.dakotapride.createframed.block.door.TintedFramedGlassSlidingDoorBlock;
+import net.dakotapride.createframed.compat.DyeDepotCompatPaneBlock;
+import net.dakotapride.createframed.compat.DyeDepotCompatTransparentBlock;
+import net.dakotapride.createframed.compat.DyeDepotCompatTrapdoorBlock;
+import net.dakotapride.createframed.compat.DyeDepotCompatWindowBlock;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.EntityType;
@@ -38,7 +41,6 @@ import static com.simibubi.create.api.behaviour.interaction.MovingInteractionBeh
 import static com.simibubi.create.api.behaviour.movement.MovementBehaviour.movementBehaviour;
 import static com.simibubi.create.foundation.data.CreateRegistrate.connectedTextures;
 
-@SuppressWarnings({"unused","removal"})
 public class CreateFramedBuilderTransformers {
     private static final CreateRegistrate REGISTRATE = CreateFramedMod.REGISTRATE.setCreativeTab(CreateFramedTabs.CREATE_FRAMED);
 
@@ -63,6 +65,34 @@ public class CreateFramedBuilderTransformers {
                                                                       Supplier<CTSpriteShiftEntry> ct,
                                                                       Supplier<MapColor> color) {
         return REGISTRATE.block(name + "_window_pane", ConnectedGlassPaneBlock::new)
+                .onRegister(connectedTextures(() -> new HorizontalCTBehaviour(ct.get())))
+                .addLayer(() -> RenderType::cutout)
+                .initialProperties(() -> Blocks.GLASS_PANE)
+                .properties(p -> p.mapColor(color.get()).noOcclusion())
+                .simpleItem()
+                .register();
+    }
+    public static BlockEntry<DyeDepotCompatWindowBlock> windowBlock(boolean fromDyeDepot, String name,
+                                                                    Supplier<ConnectedTextureBehaviour> behaviour,
+                                                                    Block block) {
+        return REGISTRATE.block(name + "_window", p -> new DyeDepotCompatWindowBlock(fromDyeDepot, p, false))
+                .onRegister(connectedTextures(behaviour))
+                .addLayer(() -> RenderType::cutout)
+                .initialProperties(() -> Blocks.GLASS)
+                .properties((p) -> p.isValidSpawn(CreateFramedBuilderTransformers::never)
+                        .isRedstoneConductor(CreateFramedBuilderTransformers::never)
+                        .isSuffocating(CreateFramedBuilderTransformers::never)
+                        .isViewBlocking(CreateFramedBuilderTransformers::never)
+                        .noOcclusion()
+                        .mapColor(block.defaultMapColor()))
+                .simpleItem()
+                .register();
+    }
+
+    public static BlockEntry<DyeDepotCompatPaneBlock.Connected> windowPaneBlock(boolean fromDyeDepot, String name,
+                                                                      Supplier<CTSpriteShiftEntry> ct,
+                                                                      Supplier<MapColor> color) {
+        return REGISTRATE.block(name + "_window_pane", properties -> new DyeDepotCompatPaneBlock.Connected(fromDyeDepot, properties))
                 .onRegister(connectedTextures(() -> new HorizontalCTBehaviour(ct.get())))
                 .addLayer(() -> RenderType::cutout)
                 .initialProperties(() -> Blocks.GLASS_PANE)
@@ -112,10 +142,28 @@ public class CreateFramedBuilderTransformers {
         return colouredFramedGlass("horizontal_" + name, behaviour, stainedBlock, dyeColour);
     }
 
+    public static BlockEntry<ConnectedFramedGlassBlock> verticalColouredFramedGlass(boolean fromDyeDepot, String name,
+                                                                              Supplier<ConnectedTextureBehaviour> behaviour,
+                                                                              Block stainedBlock, DyeColor dyeColour) {
+        return colouredFramedGlass(fromDyeDepot, "vertical_" + name, behaviour, stainedBlock, dyeColour);
+    }
+
+    public static BlockEntry<ConnectedFramedGlassBlock> horizontalColouredFramedGlass(boolean fromDyeDepot, String name,
+                                                                              Supplier<ConnectedTextureBehaviour> behaviour,
+                                                                              Block stainedBlock, DyeColor dyeColour) {
+        return colouredFramedGlass(fromDyeDepot, "horizontal_" + name, behaviour, stainedBlock, dyeColour);
+    }
+
     public static BlockEntry<ConnectedFramedGlassBlock> colouredFramedGlass(String name,
-                                                                      Supplier<ConnectedTextureBehaviour> behaviour,
-                                                                      Block stainedBlock, DyeColor dyeColour) {
-        return REGISTRATE.block(name + "_stained_framed_glass", p -> new ConnectedFramedGlassBlock(dyeColour, p))
+                                                                            Supplier<ConnectedTextureBehaviour> behaviour,
+                                                                            Block stainedBlock, DyeColor dyeColour) {
+        return colouredFramedGlass(false, name, behaviour, stainedBlock, dyeColour);
+    }
+
+    public static BlockEntry<ConnectedFramedGlassBlock> colouredFramedGlass(boolean fromDyeDepot, String name,
+                                                                            Supplier<ConnectedTextureBehaviour> behaviour,
+                                                                            Block stainedBlock, DyeColor dyeColour) {
+        return REGISTRATE.block(name + "_stained_framed_glass", p -> new ConnectedFramedGlassBlock(fromDyeDepot, dyeColour, p))
                 .onRegister(connectedTextures(behaviour))
                 .addLayer(() -> RenderType::translucent)
                 .initialProperties(() -> stainedBlock)
@@ -128,8 +176,16 @@ public class CreateFramedBuilderTransformers {
                 .register();
     }
 
-    public static BlockEntry<TransparentBlock> colouredTiledGlass(String colourType) {
-        return REGISTRATE.block(colourType + "_stained_tiled_glass", TransparentBlock::new)
+    public static BlockEntry<TransparentBlock> colouredTiledGlass(String name) {
+        return REGISTRATE.block(name + "_stained_tiled_glass", TransparentBlock::new)
+                .initialProperties(() -> Blocks.GLASS)
+                .addLayer(() -> RenderType::translucent)
+                .simpleItem()
+                .register();
+    }
+
+    public static BlockEntry<DyeDepotCompatTransparentBlock> colouredTiledGlass(boolean fromDyeDepot, String colourType) {
+        return REGISTRATE.block(colourType + "_stained_tiled_glass", properties -> new DyeDepotCompatTransparentBlock(fromDyeDepot, properties))
                 .initialProperties(() -> Blocks.GLASS)
                 .addLayer(() -> RenderType::translucent)
                 .simpleItem()
@@ -138,6 +194,14 @@ public class CreateFramedBuilderTransformers {
 
     public static BlockEntry<GlassPaneBlock> colouredTiledGlassPane(String colourType) {
         return REGISTRATE.block(colourType + "_stained_tiled_glass_pane", GlassPaneBlock::new)
+                .initialProperties(() -> Blocks.GLASS_PANE)
+                .addLayer(() -> RenderType::translucent)
+                .simpleItem()
+                .register();
+    }
+
+    public static BlockEntry<DyeDepotCompatPaneBlock> colouredTiledGlassPane(boolean fromDyeDepot, String colourType) {
+        return REGISTRATE.block(colourType + "_stained_tiled_glass_pane", properties -> new DyeDepotCompatPaneBlock(fromDyeDepot, properties))
                 .initialProperties(() -> Blocks.GLASS_PANE)
                 .addLayer(() -> RenderType::translucent)
                 .simpleItem()
@@ -182,7 +246,11 @@ public class CreateFramedBuilderTransformers {
     }
 
     public static BlockEntry<FramedGlassSlidingDoorBlock> framedGlassSlidingDoor(String type, MapColor colour) {
-        return REGISTRATE.block(type + "_stained_framed_glass_door", FramedGlassSlidingDoorBlock::new)
+        return framedGlassSlidingDoor(false, type, colour);
+    }
+
+    public static BlockEntry<FramedGlassSlidingDoorBlock> framedGlassSlidingDoor(boolean fromDyeDepot, String type, MapColor colour) {
+        return REGISTRATE.block(type + "_stained_framed_glass_door", properties -> new FramedGlassSlidingDoorBlock(fromDyeDepot, properties))
                 .initialProperties(AllBlocks.FRAMED_GLASS_DOOR)
                 .properties(p -> p.sound(SoundType.GLASS).mapColor(colour).noOcclusion())
                 .transform(CreateFramedBuilderTransformers.slidingDoor(type))
@@ -199,6 +267,16 @@ public class CreateFramedBuilderTransformers {
 
     public static BlockEntry<TrainTrapdoorBlock> framedGlassTrapdoor(String name, MapColor colour, CTSpriteShiftEntry spriteShiftEntry) {
         return REGISTRATE.block(name + "_stained_framed_glass_trapdoor", TrainTrapdoorBlock::new)
+                .initialProperties(SharedProperties::softMetal)
+                .transform(BuilderTransformers.trapdoor(false))
+                .properties(p -> p.sound(SoundType.GLASS).noOcclusion().mapColor(colour))
+                .onRegister(connectedTextures(() -> new FramedGlassTrapdoorCTBehaviour(spriteShiftEntry)))
+                .addLayer(() -> RenderType::translucent)
+                .register();
+    }
+
+    public static BlockEntry<DyeDepotCompatTrapdoorBlock> framedGlassTrapdoor(boolean fromDyeDepot, String name, MapColor colour, CTSpriteShiftEntry spriteShiftEntry) {
+        return REGISTRATE.block(name + "_stained_framed_glass_trapdoor", properties -> new DyeDepotCompatTrapdoorBlock(fromDyeDepot, properties))
                 .initialProperties(SharedProperties::softMetal)
                 .transform(BuilderTransformers.trapdoor(false))
                 .properties(p -> p.sound(SoundType.GLASS).noOcclusion().mapColor(colour))
@@ -229,10 +307,28 @@ public class CreateFramedBuilderTransformers {
         return colouredFramedGlassPane("horizontal_" + name, stainedBlock, behaviour);
     }
 
+    public static BlockEntry<DyeDepotCompatPaneBlock.Connected> verticalColouredFramedGlassPane(boolean fromDyeDepot, String name,
+                                                                                      Supplier<Block> stainedBlock,
+                                                                                      Supplier<CTSpriteShiftEntry> behaviour) {
+        return colouredFramedGlassPane(fromDyeDepot, "vertical_" + name, stainedBlock, behaviour);
+    }
+
+    public static BlockEntry<DyeDepotCompatPaneBlock.Connected> horizontalColouredFramedGlassPane(boolean fromDyeDepot, String name,
+                                                                                        Supplier<Block> stainedBlock,
+                                                                                        Supplier<CTSpriteShiftEntry> behaviour) {
+        return colouredFramedGlassPane(fromDyeDepot, "horizontal_" + name, stainedBlock, behaviour);
+    }
+
     public static BlockEntry<ConnectedGlassPaneBlock> colouredFramedGlassPane(String name, Supplier<? extends Block> parent,
                                                                               Supplier<CTSpriteShiftEntry> ctshift) {
         Supplier<Supplier<RenderType>> renderType = () -> RenderType::translucent;
         return connectedGlassPane(name + "_stained_framed_glass", parent, ctshift, renderType);
+    }
+
+    public static BlockEntry<DyeDepotCompatPaneBlock.Connected> colouredFramedGlassPane(boolean fromDyeDepot, String name, Supplier<? extends Block> parent,
+                                                                              Supplier<CTSpriteShiftEntry> ctshift) {
+        Supplier<Supplier<RenderType>> renderType = () -> RenderType::translucent;
+        return connectedGlassPaneWithDyeDepotCompat(fromDyeDepot, name + "_stained_framed_glass", parent, ctshift, renderType);
     }
 
     public static BlockEntry<TintedConnectedGlassPaneBlock> tintedFramedGlassPane(String name, Supplier<? extends Block> parent,
@@ -289,6 +385,16 @@ public class CreateFramedBuilderTransformers {
                 connectedTextures);
     }
 
+    private static BlockEntry<DyeDepotCompatPaneBlock.Connected> connectedGlassPaneWithDyeDepotCompat(boolean fromDyeDepot, String name, Supplier<? extends Block> parent,
+                                                                          Supplier<CTSpriteShiftEntry> ctshift, Supplier<Supplier<RenderType>> renderType) {
+        NonNullConsumer<? super DyeDepotCompatPaneBlock.Connected> connectedTextures =
+                connectedTextures(() -> new GlassPaneCTBehaviour(ctshift.get()));
+
+        return glassPaneWithDyeDepotCompat(name, parent,
+                properties -> new DyeDepotCompatPaneBlock.Connected(fromDyeDepot, properties), renderType,
+                connectedTextures);
+    }
+
     private static BlockEntry<TintedConnectedGlassPaneBlock> tintedConnectedGlassPane(String name, Supplier<? extends Block> parent,
                                                                           Supplier<CTSpriteShiftEntry> ctshift, Supplier<Supplier<RenderType>> renderType) {
         NonNullConsumer<? super TintedConnectedGlassPaneBlock> connectedTextures =
@@ -300,6 +406,19 @@ public class CreateFramedBuilderTransformers {
 
     private static <G extends GlassPaneBlock> BlockEntry<G> glassPane(String name, Supplier<? extends Block> parent, NonNullFunction<BlockBehaviour.Properties, G> factory,
                                                                       Supplier<Supplier<RenderType>> renderType, NonNullConsumer<? super G> connectedTextures) {
+        name += "_pane";
+
+        return REGISTRATE.block(name, factory)
+                .onRegister(connectedTextures)
+                .addLayer(renderType)
+                .initialProperties(() -> Blocks.GLASS_PANE)
+                .properties(p -> p.mapColor(parent.get().defaultMapColor()))
+                .simpleItem()
+                .register();
+    }
+
+    private static <G extends DyeDepotCompatPaneBlock> BlockEntry<G> glassPaneWithDyeDepotCompat(String name, Supplier<? extends Block> parent, NonNullFunction<BlockBehaviour.Properties, G> factory,
+                                                                                                 Supplier<Supplier<RenderType>> renderType, NonNullConsumer<? super G> connectedTextures) {
         name += "_pane";
 
         return REGISTRATE.block(name, factory)

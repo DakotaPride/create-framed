@@ -16,6 +16,23 @@
     "createframed:gray_stained_framed_glass_door",
     "createframed:light_gray_stained_framed_glass_door",
     "createframed:white_stained_framed_glass_door",
-    "createframed:brown_stained_framed_glass_door"
+    "createframed:brown_stained_framed_glass_door",
+
+    "createframed:maroon_stained_framed_glass_door",
+    "createframed:rose_stained_framed_glass_door",
+    "createframed:coral_stained_framed_glass_door",
+    "createframed:indigo_stained_framed_glass_door",
+    "createframed:navy_stained_framed_glass_door",
+    "createframed:slate_stained_framed_glass_door",
+    "createframed:olive_stained_framed_glass_door",
+    "createframed:amber_stained_framed_glass_door",
+    "createframed:beige_stained_framed_glass_door",
+    "createframed:teal_stained_framed_glass_door",
+    "createframed:mint_stained_framed_glass_door",
+    "createframed:aqua_stained_framed_glass_door",
+    "createframed:verdant_stained_framed_glass_door",
+    "createframed:forest_stained_framed_glass_door",
+    "createframed:ginger_stained_framed_glass_door",
+    "createframed:tan_stained_framed_glass_door"
   ]
 }

@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "#createframed:ginger/glass",
+    "#createframed:ginger/pane",
+    "createframed:ginger_stained_framed_glass_door",
+    "createframed:ginger_stained_framed_glass_trapdoor",
+    "createframed:ginger_cardboard_block",
+    "createframed:bound_ginger_cardboard_block",
+    "createframed:ginger_cardboard_window",
+    "createframed:ginger_cardboard_window_pane"
+  ]
+}

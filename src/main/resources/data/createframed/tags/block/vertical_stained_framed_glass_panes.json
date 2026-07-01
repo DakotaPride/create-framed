@@ -16,6 +16,23 @@
     "createframed:vertical_gray_stained_framed_glass_pane",
     "createframed:vertical_light_gray_stained_framed_glass_pane",
     "createframed:vertical_white_stained_framed_glass_pane",
-    "createframed:vertical_brown_stained_framed_glass_pane"
+    "createframed:vertical_brown_stained_framed_glass_pane",
+
+    "createframed:vertical_maroon_stained_framed_glass_pane",
+    "createframed:vertical_rose_stained_framed_glass_pane",
+    "createframed:vertical_coral_stained_framed_glass_pane",
+    "createframed:vertical_indigo_stained_framed_glass_pane",
+    "createframed:vertical_navy_stained_framed_glass_pane",
+    "createframed:vertical_slate_stained_framed_glass_pane",
+    "createframed:vertical_olive_stained_framed_glass_pane",
+    "createframed:vertical_amber_stained_framed_glass_pane",
+    "createframed:vertical_beige_stained_framed_glass_pane",
+    "createframed:vertical_teal_stained_framed_glass_pane",
+    "createframed:vertical_mint_stained_framed_glass_pane",
+    "createframed:vertical_aqua_stained_framed_glass_pane",
+    "createframed:vertical_verdant_stained_framed_glass_pane",
+    "createframed:vertical_forest_stained_framed_glass_pane",
+    "createframed:vertical_ginger_stained_framed_glass_pane",
+    "createframed:vertical_tan_stained_framed_glass_pane"
   ]
 }

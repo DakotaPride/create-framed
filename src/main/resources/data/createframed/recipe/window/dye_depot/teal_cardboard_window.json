@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "dye_depot"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "dye_depot:teal_dye"
+    },
+    {
+      "item": "createframed:cardboard_window"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "createframed:teal_cardboard_window"
+  }
+}

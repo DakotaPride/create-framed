@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "#createframed:teal/glass",
+    "#createframed:teal/pane",
+    "createframed:teal_stained_framed_glass_door",
+    "createframed:teal_stained_framed_glass_trapdoor",
+    "createframed:teal_cardboard_block",
+    "createframed:bound_teal_cardboard_block",
+    "createframed:teal_cardboard_window",
+    "createframed:teal_cardboard_window_pane"
+  ]
+}

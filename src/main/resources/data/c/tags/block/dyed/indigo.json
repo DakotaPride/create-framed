@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "#createframed:indigo/glass",
+    "#createframed:indigo/pane",
+    "createframed:indigo_stained_framed_glass_door",
+    "createframed:indigo_stained_framed_glass_trapdoor",
+    "createframed:indigo_cardboard_block",
+    "createframed:bound_indigo_cardboard_block",
+    "createframed:indigo_cardboard_window",
+    "createframed:indigo_cardboard_window_pane"
+  ]
+}
