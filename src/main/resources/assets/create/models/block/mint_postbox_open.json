@@ -1,0 +1,7 @@
+{
+  "parent": "create:block/package_postbox/block_open",
+  "textures": {
+    "0": "createframed:block/dye_depot/postbox/mint",
+    "1": "createframed:block/dye_depot/postbox/mint_open"
+  }
+}

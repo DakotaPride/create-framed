@@ -1,0 +1,7 @@
+{
+  "parent": "create:block/package_postbox/item",
+  "textures": {
+    "0": "createframed:block/dye_depot/postbox/teal",
+    "1": "createframed:block/dye_depot/postbox/teal_closed"
+  }
+}

@@ -106,13 +106,15 @@ public enum DyeDepotModule {
     public final BlockEntry<DyeDepotCompatWindowBlock> window_block;
     public final BlockEntry<DyeDepotCompatPaneBlock.Connected> window_pane;
 
+    public final DyeColor dyeColour;
+
     DyeDepotModule(Supplier<CTSpriteShiftEntry> basic_ctshift,
                    Supplier<CTSpriteShiftEntry> vertical_ctshift,
                    Supplier<CTSpriteShiftEntry> horizontal_ctshift,
                    Supplier<CTSpriteShiftEntry> window_ctshift) {
         String name = Lang.asId(name());
         Block template_block = Blocks.GLASS;
-        DyeColor dyeColour = LoadingModList.get().getModFileById("dye_depot") != null ? DyeColor.valueOf(this.name()) : DyeColor.BLACK;
+        dyeColour = LoadingModList.get().getModFileById("dye_depot") != null ? DyeColor.valueOf(this.name()) : DyeColor.BLACK;
         id = CreateFramedMod.asResource(name);
         glass_block = CreateFramedBuilderTransformers.colouredFramedGlass(true, name, () -> new SimpleCTBehaviour(basic_ctshift.get()), template_block, dyeColour);
         vertical_glass_block = CreateFramedBuilderTransformers.verticalColouredFramedGlass(true, name, () -> new HorizontalCTBehaviour(vertical_ctshift.get()), template_block, dyeColour);
@@ -184,6 +186,10 @@ public enum DyeDepotModule {
 
     public BlockEntry<DyeDepotCompatPaneBlock.Connected> getWindowPaneBlock() {
         return window_pane;
+    }
+
+    public DyeColor getDyeColour() {
+        return dyeColour;
     }
 
     public static void register() {}

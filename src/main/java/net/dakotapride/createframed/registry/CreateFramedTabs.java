@@ -1,5 +1,12 @@
 package net.dakotapride.createframed.registry;
 
+import com.simibubi.create.AllBlocks;
+import com.simibubi.create.content.contraptions.actors.seat.SeatBlock;
+import com.simibubi.create.content.equipment.toolbox.ToolboxBlock;
+import com.simibubi.create.content.kinetics.crank.ValveHandleBlock;
+import com.simibubi.create.content.logistics.packagePort.postbox.PostboxBlock;
+import com.simibubi.create.content.logistics.tableCloth.TableClothBlock;
+import com.tterrag.registrate.util.entry.BlockEntry;
 import net.dakotapride.createframed.CreateFramedMod;
 import net.dakotapride.createframed.compat.AlexsCavesModule;
 import net.dakotapride.createframed.compat.DyeDepotModule;
@@ -7,6 +14,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.DyeColor;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.loading.FMLLoader;
 import net.neoforged.fml.loading.LoadingModList;
@@ -42,6 +50,26 @@ public class CreateFramedTabs {
 
             // Dye Depot
             if (LoadingModList.get().getModFileById("dye_depot") != null || !FMLLoader.isProduction()) {
+                for (BlockEntry<TableClothBlock> entry : AllBlocks.TABLE_CLOTHS) {
+                    if (entry.get().getColor().getId() > 15)
+                        o.accept(entry.get());
+                }
+                for (BlockEntry<PostboxBlock> entry : AllBlocks.PACKAGE_POSTBOXES) {
+                    if (entry.get().getColor().getId() > 15)
+                        o.accept(entry.get());
+                }
+                for (BlockEntry<SeatBlock> entry : AllBlocks.SEATS) {
+                    if (entry.get().getColor().getId() > 15)
+                        o.accept(entry.get());
+                }
+                for (BlockEntry<ToolboxBlock> entry : AllBlocks.TOOLBOXES) {
+                    if (entry.get().getColor().getId() > 15)
+                        o.accept(entry.get());
+                }
+                for (BlockEntry<ValveHandleBlock> entry : AllBlocks.DYED_VALVE_HANDLES) {
+                    if (entry.get().color != null && entry.get().color.getId() > 15)
+                        o.accept(entry.get());
+                }
                 for (DyeDepotModule module : DyeDepotModule.values()) {
                     o.accept(module.getGlassDoorBlock());
                     o.accept(module.getGlassTrapdoorBlock());

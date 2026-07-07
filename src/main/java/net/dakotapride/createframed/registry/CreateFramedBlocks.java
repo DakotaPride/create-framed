@@ -24,6 +24,8 @@ import java.util.function.Supplier;
 
 import static net.dakotapride.createframed.CreateFramedMod.REGISTRATE;
 
+// TODO: VALVE HANDLES, SAILS, SEATS
+
 public enum CreateFramedBlocks {
     RED(() -> CreateFramedSpriteShifts.RED_STAINED_FRAMED_GLASS,
             () -> CreateFramedSpriteShifts.VERTICAL_RED_STAINED_FRAMED_GLASS,

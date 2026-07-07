@@ -58,7 +58,6 @@ public class CreateFramedMod {
         CreateFramedPackageStyles.Items.register();
         CreateFramedEntityTypes.register();
         CreateFramedTabs.register(bus);
-        // forgeBus.addListener(this::fillCreativeItemGroup);
 
         // Register ourselves for server and other game events we are interested in
         //NeoForge.EVENT_BUS.register(this);

@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "create:maroon_postbox",
+    "create:rose_postbox",
+    "create:coral_postbox",
+    "create:indigo_postbox",
+    "create:navy_postbox",
+    "create:slate_postbox",
+    "create:olive_postbox",
+    "create:amber_postbox",
+    "create:beige_postbox",
+    "create:teal_postbox",
+    "create:mint_postbox",
+    "create:aqua_postbox",
+    "create:verdant_postbox",
+    "create:forest_postbox",
+    "create:ginger_postbox",
+    "create:tan_postbox"
+  ]
+}
