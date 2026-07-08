@@ -19,6 +19,71 @@
     "createframed:brown_package",
     "createframed:karpboard_package",
     "createframed:fordalels_package",
-    "createframed:axolotl_lucy_package"
+    "createframed:axolotl_lucy_package",
+
+    {
+      "required": false,
+      "id": "createframed:maroon_package"
+    },
+    {
+      "required": false,
+      "id": "createframed:rose_package"
+    },
+    {
+      "required": false,
+      "id": "createframed:coral_package"
+    },
+    {
+      "required": false,
+      "id": "createframed:indigo_package"
+    },
+    {
+      "required": false,
+      "id": "createframed:navy_package"
+    },
+    {
+      "required": false,
+      "id": "createframed:slate_package"
+    },
+    {
+      "required": false,
+      "id": "createframed:olive_package"
+    },
+    {
+      "required": false,
+      "id": "createframed:amber_package"
+    },
+    {
+      "required": false,
+      "id": "createframed:beige_package"
+    },
+    {
+      "required": false,
+      "id": "createframed:teal_package"
+    },
+    {
+      "required": false,
+      "id": "createframed:mint_package"
+    },
+    {
+      "required": false,
+      "id": "createframed:aqua_package"
+    },
+    {
+      "required": false,
+      "id": "createframed:verdant_package"
+    },
+    {
+      "required": false,
+      "id": "createframed:forest_package"
+    },
+    {
+      "required": false,
+      "id": "createframed:ginger_package"
+    },
+    {
+      "required": false,
+      "id": "createframed:tan_package"
+    }
   ]
 }
